@@ -5,8 +5,8 @@ import ContactNow from "./components/contact-now";
 
 export default function Home() {
   return (
-    <main className="pb-32">
-      <header className="h-[100px] w-full sticky top-0 flex items-center justify-between">
+    <main>
+      <header className="h-[100px] w-full top-0 flex items-center justify-between">
         <nav className="w-[90%] mx-auto">
           <Image src={Logo} alt="logo" />
 
@@ -32,7 +32,7 @@ export default function Home() {
         {/* <ContactNow /> */}
       </div>
 
-      <footer className="fixed bottom-0 h-[70px] w-full">
+      <footer className="footer  h-[70px] w-full mt-[200px]">
         <div className="w-[90%] mx-auto flex justify-between text-sm text-[#A8A8A8]">
           <span>©2024 Hephi</span>
           <span>Privacy policy</span>
