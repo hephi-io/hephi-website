@@ -5,8 +5,8 @@ import ContactNow from "./components/contact-now";
 
 export default function Home() {
   return (
-    <main>
-      <header className="h-[100px] flex items-center justify-between">
+    <main className="pb-32">
+      <header className="h-[100px] w-full sticky top-0 flex items-center justify-between">
         <nav className="w-[90%] mx-auto">
           <Image src={Logo} alt="logo" />
 
