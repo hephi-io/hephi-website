@@ -1,43 +1,62 @@
-import Image from "next/image";
-import Logo from "@/app/assets/logo.svg";
-import GetNotified from "./components/get-notified";
-import ContactNow from "./components/contact-now";
+"use client"
+
+import Logo from "./assets/hephi-logo.svg"
+import MenuIcon from "./assets/menu-icon.svg"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <main>
-      <header className="h-[100px] w-full top-0 flex items-center justify-between">
-        <nav className="w-[90%] mx-auto">
-          <Image src={Logo} alt="logo" />
 
-          {/* <div className="w-[60px] h-8 border border-white rounded-3xl flex items-center">
-          <div className="w-6 h-6 bg-white rounded-full"></div>
-        </div> */}
-        </nav>
-      </header>
+      <section>
 
-      <div className="bg-[#1B1B1C] w-[90%] max-w-[725px] mx-auto p-6 rounded-2xl mt-32">
-        <div className="flex items-center bg-[#242425] h-[52px] rounded-xl mb-10 px-1">
-          <div className="w-1/2 border border-[#373738] bg-[#2D2D2E] h-[44px] flex items-center justify-center rounded-lg font-medium">
-            Get Notified
-          </div>
+        <section className="border border-[#EBEBED] p-4 bg-[#F3F3F3]">
 
-          <div className="w-1/2 flex items-center justify-center font-medium">
-            Contact Now
-          </div>
-        </div>
+          <section>
 
-        <GetNotified />
+            <nav className="nav h-[54px] flex justify-between items-center p-2 pl-4 mb-[104px]">
 
-        {/* <ContactNow /> */}
-      </div>
+              <div className="pt-2 pb-2">
+                <Image 
+                  src={Logo} 
+                  width={100.88} 
+                  height={19} 
+                  alt="Hephi Logo" 
+                />
+              </div>
 
-      <footer className="footer  h-[70px] w-full mt-[200px]">
-        <div className="w-[90%] mx-auto flex justify-between text-sm text-[#A8A8A8]">
-          <span>©2024 Hephi</span>
-          <span>Privacy policy</span>
-        </div>
-      </footer>
+              <div className="rounded p-2 bg-white flex gap-x-2">
+
+                <Image
+                  src={MenuIcon}
+                  width={20.56}
+                  height={20.56}
+                  alt="Menu Icon"
+                />
+
+                <div className="font-normal text-lg leading-[21.6px] text-[#2B2B2B]">
+                  Menu
+                </div>
+
+              </div>
+
+            </nav>
+
+            <div></div>
+
+          </section>
+
+          <section></section>
+          <div></div>
+
+        </section>
+
+        <section></section>
+
+      </section>
+
+      <section></section>
+
     </main>
   );
 }
