@@ -2,6 +2,7 @@
 
 import Logo from "./assets/hephi-logo.svg"
 import MenuIcon from "./assets/menu-icon.svg"
+import Arrow from "./assets/arrow-forward.svg"
 import Image from "next/image"
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="rounded p-2 bg-white flex gap-x-2">
+              <button className="rounded p-2 bg-white flex gap-x-2">
 
                 <Image
                   src={MenuIcon}
@@ -38,11 +39,32 @@ export default function Home() {
                   Menu
                 </div>
 
-              </div>
+              </button>
 
             </nav>
 
-            <div></div>
+            <div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#6F6F6F] mb-8">
+                We create advanced, innovative digital solutions that stand out. Whether you&apos;re a tech giant or a growing SME, we love partnering with companies of all sizes to bring their visions to life. 
+              </div>
+
+              <button className="rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center">
+
+                <div className="font-bold text-base leading-[20.8px] text-white">
+                  Get in touch
+                </div>
+                
+                <Image 
+                  src={Arrow}
+                  width={24}
+                  height={24}
+                  alt="Arrow"
+                />
+
+              </button>
+
+            </div>
 
           </section>
 
@@ -51,6 +73,7 @@ export default function Home() {
 
         </section>
 
+        {/* IMAGE */}
         <section></section>
 
       </section>
