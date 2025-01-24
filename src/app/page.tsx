@@ -9,6 +9,11 @@ import HephiH from "./assets/svgs/hephi-h-logo.svg"
 
 import PictureOne from "./assets/pngs/Frame 1321313983.png"
 import PictureTwo from "./assets/pngs/Union.png"
+import PictureFive from "./assets/pngs/jpeg-optimizer_7557cda1e32882648d3615337d075753.png"
+import PictureSix from "./assets/pngs/dna-pic.png"
+
+import PictureThree from "./assets/jpegs/7821a48dba989370aabe20e25ad825ee.jpeg"
+import PictureFour from "./assets/jpegs/trading-view-photo.jpeg"
 
 import Image from "next/image"
 
@@ -22,7 +27,7 @@ export default function Home() {
 
           <section>
 
-            <nav className="fixed top-4 right-4 left-4 nav w-[90%] h-[54px] flex justify-between items-center p-2 pl-4">
+            <nav className="fixed z-10 top-4 right-4 left-4 nav w-[90%] h-[54px] flex justify-between items-center p-2 pl-4">
 
               <div className="pt-2 pb-2">
                 <Image 
@@ -120,21 +125,21 @@ export default function Home() {
 
       </section>
 
-      <section className="p-4 pt-12 bg-[#F3F3F3]">
+      <section className="pb-4 pt-12 bg-[#F3F3F3] mb-24">
 
-        <div className="font-normal text-base leading-[19.2px] text-[#2B2B2B] mb-20">
+        <div className="font-normal text-base leading-[19.2px] text-[#2B2B2B] w-[90%] mx-auto mb-20">
           ABOUT
         </div>
 
-        <div className="font-normal text-[32px] leading-[32px] text-[#363636] mb-6">
+        <div className="font-normal text-[32px] leading-[32px] text-[#363636] w-[90%] mx-auto mb-6">
           Crafting World-Class Digital Products for All
         </div>
 
-        <div className="fobt-normal text-base leading-[19.2px] text-[#6F6F6F] mb-12">
+        <div className="fobt-normal text-base leading-[19.2px] text-[#6F6F6F] w-[90%] mx-auto mb-12">
           we are driven by a passion for innovation and a commitment to excellence. Our mission is to empower businesses and individuals to achieve their goals through cutting-edge digital solutions. We specialize in crafting creative, advanced, and tailored products that resonate with audiences and drive success.
         </div>
 
-        <div className="relative">
+        <div className="relative w-[90%] mx-auto">
 
           <Image
             src={PictureTwo}
@@ -149,6 +154,573 @@ export default function Home() {
               width={33.03}
               height={31.12}
             />
+          </div>
+
+        </div>
+
+      </section>
+
+      <section  className="mb-24">
+
+        <section className="h-[60.5px] overflow-x-hidden flex gap-x-[21.19px] items-center mb-[13.7px]">
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+        </section>
+
+        <section className="h-[60.5px] overflow-x-hidden flex gap-x-[21.19px] items-center mb-[13.7px]">
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+        </section>
+
+        <section className="h-[60.5px] overflow-x-hidden flex gap-x-[21.19px] items-center mb-[13.7px]">
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+        </section>
+
+        <section className="h-[60.5px] overflow-x-hidden flex gap-x-[21.19px] items-center mb-[13.7px]">
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+          <section className="flex gap-x-[12.1px] item-center">
+
+            <div className="font-normal text-[24.2px] leading-[29.04px] text-[#6F6F6F]">
+              Energetic
+            </div>
+
+            <div className="w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9]"></div>
+
+          </section>
+
+        </section>
+
+      </section>
+
+      <section className="mb-24">
+
+        <div className="w-[90%] mx-auto font-normal text-base leading-[19.2px] text-[#2B2B2B] mb-6">
+          SERVICES
+        </div>
+
+        <div className="w-[90%] mx-auto font-normal text-[32px] leading-[32px] text-[#363636] mb-10">
+          Shaping Tomorrow&apos;s Digital Landscape with Unmatched Creativity and Precision
+        </div>
+
+        <div className="w-[90%] mx-auto flex flex-col gap-y-4">
+
+          <div className="rounded-3xl bg-[#F3F3F3] pt-4 pb-6">
+
+            <div className="relative w-[90%] h-[294px] mx-auto rounded-xl border border-[#EBEBED] mb-9">
+
+              <Image
+                src={PictureThree}
+                alt="" 
+                className="w-full h-full rounded-xl object-cover"
+              />
+
+              <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313]">
+                <Image
+                  src={Arrow}
+                  width={25.2}
+                  height={25.2}
+                  alt=""
+                />
+              </div>
+
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-2xl leading-6 text-[#363636] mb-2">
+              Product Design
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-base leading-[19.2px] text-[#6F6F6F]">
+              Turning ideas into innovative, user-centered digital products.
+            </div>
+
+          </div>
+
+          <div className="rounded-3xl bg-[#F3F3F3] pt-4 pb-6">
+
+            <div className="relative w-[90%] h-[294px] mx-auto rounded-xl border border-[#EBEBED] mb-9">
+
+              <Image
+                src={PictureFour}
+                alt="" 
+                className="w-full h-full rounded-xl object-cover"
+              />
+
+              <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313]">
+                <Image
+                  src={Arrow}
+                  width={25.2}
+                  height={25.2}
+                  alt=""
+                />
+              </div>
+
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-2xl leading-6 text-[#363636] mb-2">
+              Brand Identity Design
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-base leading-[19.2px] text-[#6F6F6F]">
+              Turning ideas into innovative, user-centered digital products.
+            </div>
+
+          </div>
+
+          <div className="rounded-3xl bg-[#F3F3F3] pt-4 pb-6">
+
+            <div className="relative w-[90%] h-[294px] mx-auto rounded-xl border border-[#EBEBED] mb-9">
+
+              <Image
+                src={PictureFive}
+                alt="" 
+                className="w-full h-full rounded-xl object-cover"
+              />
+
+              <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313]">
+                <Image
+                  src={Arrow}
+                  width={25.2}
+                  height={25.2}
+                  alt=""
+                />
+              </div>
+
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-2xl leading-6 text-[#363636] mb-2">
+              Web Development
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-base leading-[19.2px] text-[#6F6F6F]">
+              Turning ideas into innovative, user-centered digital products.
+            </div>
+
+          </div>
+
+          <div className="rounded-3xl bg-[#F3F3F3] pt-4 pb-6">
+
+            <div className="relative w-[90%] h-[294px] mx-auto rounded-xl border border-[#EBEBED] mb-9">
+
+              <video
+                src="/-b8db-4ccd-9ed8-819b4e4701ab.mp4"
+                autoPlay
+                loop
+                className="w-full h-full rounded-xl object-cover"
+              >
+                <Image
+                  src={PictureSix}
+                  alt="" 
+                  className="w-full h-full rounded-xl object-cover"
+                />
+              </video>
+
+              <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313]">
+                <Image
+                  src={Arrow}
+                  width={25.2}
+                  height={25.2}
+                  alt=""
+                />
+              </div>
+
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-2xl leading-6 text-[#363636] mb-2">
+              Talent Outsourcing
+            </div>
+
+            <div className="w-[90%] mx-auto font-normal text-base leading-[19.2px] text-[#6F6F6F]">
+              Turning ideas into innovative, user-centered digital products.
+            </div>
+
           </div>
 
         </div>
