@@ -32,7 +32,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      
+
       <section>
         <section className="h-[864px] border border-[#EBEBED] p-4 bg-[#F3F3F3] flex flex-col justify-between">
           <section>
@@ -1226,6 +1226,133 @@ export default function Home() {
 
               </div>
             </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="bg-[#4795FF] py-9">
+        <div className="w-[90%] mx-auto">
+
+          <div className="font-normal text-4xl leading-9 text-white">
+            We&apos;re excited to bring your next ideas to life
+          </div>
+
+          <div className="mt-10 py-6 rounded-3xl bg-white">
+            <div className="w-[86.7%] mx-auto">
+
+              <div className="font-normal text-2xl leading-6 text-[#363636]">
+                Get in touch
+              </div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#6F6F6F] mt-6 mb-1">
+                Are you a brand or company in need of contagiously creative stopping power? Just hit us up!
+              </div>
+
+              <button className="h-12	rounded-full px-6 py-3 mt-14 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center">
+                
+                <div className="font-bold text-lg leading-[23.4px] text-white">
+                  Get in touch
+                </div>
+
+                <Image 
+                  src={Arrow}
+                  width={24}
+                  height={24}
+                  alt="arrow"
+                />
+
+              </button>
+
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6 mt-10">
+
+            <div className="pt-10">
+
+              <div className="font-bold text-base leading-[19.2px] text-white">
+                Office
+              </div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#FFFFFFCC] mt-4">
+
+                <div>
+                  De Corridor 12G
+                </div>
+
+                <div className="mt-1"> 
+                  Lekki, Lagos
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="pt-10">
+
+              <div className="font-bold text-base leading-[19.2px] text-white">
+                Call line
+              </div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#FFFFFFCC] mt-4">
+
+                <div>
+                  Mel: +31 6 14 97 98 40
+                </div>
+
+                <div className="mt-1">
+                  Ikenna: +31 6 51 76 07 63
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="pt-10">
+
+              <div className="font-bold text-base leading-[19.2px] text-white">
+                Mail Us
+              </div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#FFFFFFCC] mt-4">
+
+                <div>
+                  info@hephi.io
+                </div>
+
+                <div className="mt-1">
+                  careers@hephi.io
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="pt-10">
+
+              <div className="font-bold text-base leading-[19.2px] text-white">
+                Follow us
+              </div>
+
+              <div className="font-normal text-base leading-[19.2px] text-[#FFFFFFCC] mt-4">
+
+                <div>
+                  Instagram
+                </div>
+
+                <div className="mt-1">
+                  LinkedIn
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="font-bold text-base leading-[19.2px] text-white mt-20">
+            General terms
           </div>
 
         </div>
