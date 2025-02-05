@@ -51,3 +51,23 @@ body {
   background-blend-mode: normal, soft-light;
   box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
 }
+
+.marquee {
+  animation: loop 30s linear infinite;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tab-nav-switch {
+  /* background: linear-gradient(0deg, rgba(177, 173, 173, 0.2), rgba(177, 173, 173, 0.2)), rgba(0, 0, 0, 0.4); */
+  background-blend-mode: normal, soft-light;
+  box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
+  backdrop-filter: blur(15px);
+}
