@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from "next/image"
 
+import Heading from "@/app/components/shared/heading"
+
 import HephiH from "@/app/assets/svgs/hephi-h-logo.svg"
 
 import PictureTwo from "@/app/assets/pngs/Union.png"
@@ -15,15 +17,15 @@ const About = () => {
         <div className="sm:rounded-[42px] sm:border sm:border-[#EBEBED] sm:py-9 sm:bg-[#F3F3F3] md:w-[41.12%]">
           <div className="sm:w-[90.84%] sm:mx-auto md:w-[87.41%] md:h-full md:flex md:flex-col md:justify-between">
 
-            <div className="font-normal text-base leading-[19.2px] text-[#2B2B2B] mb-20 sm:mb-40 md:mb-0">
+            <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-20 sm:mb-40 md:mb-0" text="">
               ABOUT
-            </div>
+            </Heading>
             
             <div>
 
-              <div className="font-normal text-[32px] leading-[32px] text-[#363636] mb-6">
+              <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] mb-6" text="">
                 Crafting World-Class Digital Products for All
-              </div>
+              </Heading>
 
               <div className="fobt-normal text-base leading-[19.2px] text-[#6F6F6F] mb-12 sm:mb-0">
                 we are driven by a passion for innovation and a commitment to

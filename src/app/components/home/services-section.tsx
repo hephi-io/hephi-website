@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from "next/image"
 
+import Heading from "@/app/components/shared/heading"
+
 import Arrow from "@/app/assets/svgs/arrow-forward.svg"
 
 import PictureThree from "@/app/assets/jpegs/7821a48dba989370aabe20e25ad825ee.jpeg"
@@ -26,14 +28,14 @@ const ServicesSection = () => {
 
         <div className="mb-10 sm:mb-20 sm:flex sm:justify-between sm:items-start">
 
-          <div className="text-base leading-[19.2px] text-[#2B2B2B] md:text-xl md:leading-6 mb-6">
+          <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] md:text-xl md:leading-6 mb-6" text="">
             SERVICES
-          </div>
+          </Heading>
 
-          <div className="text-[32px] leading-[32px] text-[#363636] sm:w-[63.61%] md:text-5xl md:leading-[48px] md:w-[35.95%]">
+          <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] sm:w-[63.61%] md:text-5xl md:leading-[48px] md:w-[35.95%]" text="">
             Shaping Tomorrow&apos;s Digital Landscape with Unmatched Creativity
             and Precision
-          </div>
+          </Heading>
 
         </div>
 
@@ -56,9 +58,9 @@ const ServicesSection = () => {
 
                 </div>
 
-                <div className="text-2xl leading-6 text-[#363636] md:text-[32px] md:leading-[32px] mb-2 sm:mb-4">
+                <Heading as="div" className="text-2xl leading-6 text-[#363636] md:text-[32px] md:leading-[32px] mb-2 sm:mb-4" text="">
                   { serviceCard.heading }
-                </div>
+                </Heading>
 
                 <div className={`text-base leading-[19.2px] text-[#6F6F6F] ${(!serviceCard.isHover && "md:hidden")} md:text-xl md:leading-6`}>
                   Turning ideas into innovative, user-centered digital products.

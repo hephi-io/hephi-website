@@ -33,7 +33,7 @@ export default function Home() {
         <button className="rounded p-2 bg-white flex gap-x-2">
           <Image src={MenuIcon} width={20.56} height={20.56} alt="Menu Icon" />
 
-          <div className="font-normal text-lg leading-[21.6px] text-[#2B2B2B]">
+          <div className={ `${francoisOne.className} text-lg leading-[21.6px] text-[#2B2B2B]` }>
             Menu
           </div>
         </button>
