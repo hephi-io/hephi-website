@@ -1,14 +1,14 @@
-"use client"
-import Image from 'next/image'
-import React from 'react'
-import CardIG from "../assets/jpegs/a59edf0245df657c9d12deea3c5cd450.jpeg"
-import Logo from "../assets/svgs/hephi-logo.svg"
-import MenuIcon from "../assets/svgs/menu-icon.svg"
+"use client";
+import Image from "next/image";
+import React from "react";
+import CardIG from "../assets/jpegs/a59edf0245df657c9d12deea3c5cd450.jpeg";
+import Logo from "../assets/svgs/hephi-logo.svg";
+import MenuIcon from "../assets/svgs/menu-icon.svg";
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
-import DarkIcon from "../assets/svgs/dark-icon.svg"
-import LightIcon from "../assets/svgs/light-icon.svg"
-import Arrow from "../assets/svgs/arrow-forward.svg"
+import DarkIcon from "../assets/svgs/dark-icon.svg";
+import LightIcon from "../assets/svgs/light-icon.svg";
+import Arrow from "../assets/svgs/arrow-forward.svg";
 import { FaArrowRight } from "react-icons/fa";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 
@@ -170,94 +170,96 @@ function Contact() {
                 </div>
 
 
-                
+
                 {/* faq section */}
                 <div className='grid  grid-cols-1  my-6  border-red-800 gap-4'>
-                    <div className="bg-[#4795FF] p-4 rounded-xl flex flex-row gap-6 items-center">
-                        <div className="lg:w-10 lg:h-10 w-[4rem] h-[3rem] rounded-full border-2 border-white shadow-md flex items-center justify-center text-white">
+                    <div className="bg-[#4795FF] p-4 rounded-xl flex items-start flex-row gap-6 ">
+                        <div className="lg:w-[3rem] lg:h-[2.7rem] w-[3rem] h-[2rem] rounded-full border-2 border-white shadow-md flex items-center justify-center text-white">
                             <h6 className="text-center">1</h6>
                         </div>
 
                         <div className='text-white basis-full'>
-                            <h3 className=' font-bold text-xl'>Do you offer post-launch support?</h3>
-                            <p className=" text-sm mb-4">yes, we provide ongoing support and optimization services to ensure your digital product continues to perform at its best.</p>
+                            <h3 className=' font-bold text-sm md:text-xl'>Do you offer post-launch support?</h3>
+                            <p className=" text-xs md:text-base">yes, we provide ongoing support and optimization services to ensure your digital product continues to perform at its best.</p>
                         </div>
-                        <div className="bg-white text-blue-500 rounded-full lg:w-10 lg:h-10 w-[4rem] h-[3rem] border-2 border-white shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-blue-500 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-white shadow-md flex justify-center items-center cursor-pointer">
                             <FaPlus />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-10 lg:h-10 w-[4rem] h-[3rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[3rem] lg:h-[2.7rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
                             <h6 className="text-center">2</h6>
                         </div>
 
                         <div className='text-black basis-full'>
-                            <h3 className=' font-bold text-xl'>Do you work with international clients</h3>
+                            <h3 className=' font-bold text-sm md:text-xl'>Do you work with international clients</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-10 lg:h-10 w-[4rem] h-[3rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-10 lg:h-10 w-[4rem] h-[3rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
                             <h6 className="text-center">3</h6>
                         </div>
 
                         <div className='text-black basis-full'>
-                            <h3 className=' font-bold text-xl'>Can you scale your services as our 
-                            company grows?</h3>
+                            <h3 className=' font-bold text-sm md:text-xl'>Can you scale your services as our
+                                company grows?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-10 lg:h-10 w-[4rem] h-[3rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-10 lg:h-10 w-[4rem] h-[3rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
                             <h6 className="text-center">4</h6>
                         </div>
 
                         <div className='text-black basis-full'>
-                            <h3 className=' font-bold text-xl'>What is your pricing structure?</h3>
+                            <h3 className=' font-bold text-sm md:text-xl'>What is your pricing structure?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-10 lg:h-10 w-[4rem] h-[3rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-10 lg:h-10 w-[4rem] h-[3rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
                             <h6 className="text-center">5</h6>
                         </div>
 
                         <div className='text-black basis-full'>
-                            <h3 className=' font-bold text-xl'>Can you help with rebranding an existing company?</h3>
+                            <h3 className=' font-bold text-sm md:text-xl'>Can you help with rebranding an existing company?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-10 lg:h-10 w-[4rem] h-[3rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* footer */}
-                <div className='bg-[#4795FF]  rounded-xl container'>
+            {/* footer */}
+            <div className='container mx-auto p-2'>
+                <div className='bg-[#4795FF]  rounded-xl'>
                     <div className='flex justify-between gap-[10px] items-center lg:items-start flex-col lg:flex-row p-4'>
                         <div className="leading-[36px]  lg:basis-[421px]  p-4 md:text-48px lg:leading-[48px] ">
-                            <h1 className="text-4xl   text-white font-[400] md:font-semibold  lg:text-5xl ">We're excited to bring your next ideas to life</h1>
+                            <h1 className="text-lg md:text-2xl   text-white font-[400] md:font-semibold  lg:text-5xl ">We're excited to bring your next ideas to life</h1>
                         </div>
                         <div className='bg-[#f3f3f3] px-3  md:px-7 py-4 rounded-2xl lg:basis-[500px] basis-full'>
-                            <div className="flex flex-row md:flex-col gap-6 md:gap-0">
+                            <div className="">
                                 <div className="">
                                     <h1 className="text-2xl font-bold  my-2 leading-[3rem]">Get in touch</h1>
                                     <div className="font-normal text-base leading-[19.2px] text-[#6F6F6F] mb-8">
                                         Are you a brand or company in need of contagiously creative stopping power? Just hit us up!
                                     </div>
                                 </div>
-                                <div className='flex-[80%]'>
+                                <div className=''>
                                     <button className="rounded-full py-2 px-10 md:px-6 md:py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center">
 
                                         <h2 className="text-xs md:text-base md:leading-[20.8px] text-white">
@@ -283,7 +285,7 @@ function Contact() {
                             <p>Lekki, Lagos</p>
                         </div>
                         <div className=''>
-                            <h3 className="text-lg font-semibold mb-2">Call Line</h3>
+                            <h3 className=" text-sm md:text-lg font-semibold mb-2">Call Line</h3>
                             <p>Mel: +31 6 14 97 98 40</p>
                             <p>Ikenna: +31 6 51 76 07 63</p>
                         </div>
@@ -298,7 +300,7 @@ function Contact() {
                             <p>LinkedIn</p>
                         </div>
                     </div>
-                    <p className="font-semibold text-white m-4  p-4 ">General Terms</p>
+                    <p className="font-semibold text-white text-sm md:text-lg p-4 ">General Terms</p>
                 </div>
             </div>
         </div>
