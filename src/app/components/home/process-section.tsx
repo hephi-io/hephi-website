@@ -59,47 +59,47 @@ const ProcessSection = () => {
 
   return (
     <section className="mb-24 sm:mb-[120px]">
-      <div className="w-[90%] mx-auto sm:w-[94.24%] md:w-[96.66%]">
+      <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
 
-        <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6" text="">
+        <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6">
           PROCESS
         </Heading>
 
-        <div className="flex flex-col gap-y-6 sm:grid sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
+        <div className="flex flex-col gap-y-6 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           { processSectionCards.map(( processSectionCard, index ) => (
-            <div key={ index } className="relative rounded-3xl bg-[#F3F3F3] py-9">
+          <div key={ index } className="relative rounded-3xl bg-[#F3F3F3] py-9">
 
-              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between sm:w-[81.10%] sm:h-[368px] md:w-[83.92%]">
+            <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between sm:w-[81.10%] sm:h-[368px] lg:w-[83.92%]">
 
-                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center text-base leading-4 text-[#363636] z-10">
-                  { processSectionCard.number }
-                </div>
-
-                <div>
-
-                  <Heading as="div" className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 md:text-4xl md:leading-9" text="">
-                    { processSectionCard.header }
-                  </Heading>
-
-                  <div className="text-base leading-4 text-[#363636] sm:text-xl sm:leading-5 mt-6">
-                    { processSectionCard.paragraphText }
-                  </div>
-
-                </div>
-
+              <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center text-base leading-4 text-[#363636] z-10">
+                { processSectionCard.number }
               </div>
 
-              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px] sm:left-[12.5%] sm:bottom-[47.5%] sm:w-[75.59%] sm:h-[286px]  md:w-[60.69%] md:left-[19.65%] md:bottom-[44%]">
-                <Image
-                  src={processSectionCard.imageSrc}
-                  alt=""
-                  width={undefined}
-                  height={undefined}
-                  className="w-full h-full object-cover"
-                />
+              <div>
+
+                <Heading as="div" className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 lg:text-4xl lg:leading-9">
+                  { processSectionCard.header }
+                </Heading>
+
+                <div className="text-base leading-4 text-[#363636] sm:text-xl sm:leading-5 mt-6">
+                  { processSectionCard.paragraphText }
+                </div>
+
               </div>
 
             </div>
+
+            <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px] sm:left-[12.5%] sm:bottom-[47.5%] sm:w-[75.59%] sm:h-[286px]  lg:w-[60.69%] lg:left-[19.65%] lg:bottom-[44%]">
+              <Image
+                src={processSectionCard.imageSrc}
+                alt=""
+                width={undefined}
+                height={undefined}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+          </div>
           ))}
         </div>
 
