@@ -106,20 +106,20 @@ function Contact() {
 
                                 <form className=''>
                                     <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
-                                        <input type="text" name="firstName" className="w-full border border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold" placeholder="First name" required />
-                                        <input type="text" name="lastName" className="w-full border border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold" placeholder="Last name" required />
+                                        <input type="text" name="firstName" className="w-full  border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold" placeholder="First name" required />
+                                        <input type="text" name="lastName" className="w-full  border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold" placeholder="Last name" required />
                                     </div>
 
-                                    <input type="email" name="email" className="w-full border border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold mb-4" required placeholder="Email Address" />
+                                    <input type="email" name="email" className="w-full border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold mb-4" required placeholder="Email Address" />
 
-                                    <select name="service" className="w-full border border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold mb-4">
+                                    <select name="service" className="w-full  border-gray-300 rounded-md p-3 bg-[#f3f3f3] placeholder:font-semibold mb-4">
                                         <option value="">-- Select --</option>
                                         <option value="web-design">Web Design</option>
                                         <option value="development">Development</option>
                                         <option value="marketing">Marketing</option>
                                     </select>
 
-                                    <textarea name="message" rows={4} className="w-full border border-gray-300 rounded-md px-3 py-2 bg-[#f3f3f3] placeholder:font-semibold mb-2" placeholder="Type your message" required />
+                                    <textarea name="message" rows={4} className="w-full  border-gray-300 rounded-md px-3 py-2 bg-[#f3f3f3] placeholder:font-semibold mb-2" placeholder="Type your message" required />
 
                                     <button type="submit" className="w-full flex justify-between items-center bg-[#4795FF] rounded-xl text-white font-bold p-4 my-4">
                                         Contact Our Team
@@ -173,71 +173,71 @@ function Contact() {
 
                 {/* faq section */}
                 <div className='grid  grid-cols-1  my-6  border-red-800 gap-4'>
-                    <div className="bg-[#4795FF] p-4 rounded-xl flex items-start flex-row gap-6 ">
-                        <div className="lg:w-[3rem] lg:h-[2.7rem] w-[3rem] h-[2rem] rounded-full border-2 border-white shadow-md flex items-center justify-center text-white">
+                    <div className="bg-[#4795FF] p-4 rounded-xl flex items-start flex-row gap-6 py-7 ">
+                        <div className=" lg:w-[2rem] lg:h-[1.9rem] md:w-[3rem] md:h-[2.4rem] w-[3rem] h-[2rem] rounded-full border-2 border-white  flex items-center justify-center text-white">
                             <h6 className="text-center">1</h6>
                         </div>
 
-                        <div className='text-white basis-full'>
-                            <h3 className=' font-bold text-sm md:text-xl'>Do you offer post-launch support?</h3>
-                            <p className=" text-xs md:text-base">yes, we provide ongoing support and optimization services to ensure your digital product continues to perform at its best.</p>
+                        <div className='text-white basis-full lg:basis-[90%] lg:mx-7'>
+                            <h3 className=' font-bold text-sm md:text-xl lg:my-2'>Do you offer post-launch support?</h3>
+                            <p className="text-xs md:text-base lg:w-[700px]">yes, we provide ongoing support and optimization services to ensure your digital product continues to perform at its best.</p>
                         </div>
-                        <div className="bg-white text-blue-500 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-white shadow-md flex justify-center items-center cursor-pointer">
-                            <FaPlus />
+                        <div className="bg-white text-black rounded-full lg:w-[3rem] lg:h-[2.9rem] md:w-[3rem] md:h-[2.6rem] w-[3rem] h-[2rem] border-2 border-white  flex justify-center items-center cursor-pointer">
+                            <FaPlus className="text-lg" />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-[3rem] lg:h-[2.7rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[2rem] lg:h-[1.9rem] md:w-[3rem] md:h-[2.4rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700  flex items-center justify-center text-gray-700">
                             <h6 className="text-center">2</h6>
                         </div>
 
-                        <div className='text-black basis-full'>
+                        <div className='text-black basis-full lg:basis-[90%] lg:mx-7'>
                             <h3 className=' font-bold text-sm md:text-xl'>Do you work with international clients</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
-                            <FaMinus />
+                        <div className="bg-white text-black rounded-full lg:w-[3rem] lg:h-[2.9rem] md:w-[3rem] md:h-[2.6rem] w-[3rem] h-[2rem] border-2 border-grey-700  flex justify-center items-center cursor-pointer">
+                            <FaMinus className="text-sm" />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[2rem] lg:h-[1.9rem] md:w-[3rem] md:h-[2.4rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 flex items-center justify-center text-gray-700">
                             <h6 className="text-center">3</h6>
                         </div>
 
-                        <div className='text-black basis-full'>
+                        <div className='text-black basis-full lg:basis-[90%] lg:mx-7'>
                             <h3 className=' font-bold text-sm md:text-xl'>Can you scale your services as our
                                 company grows?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] md:w-[3rem] md:h-[2.6rem]  w-[3rem] h-[2rem] border-2 border-grey-700  flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[2rem] lg:h-[1.9rem] md:w-[3rem] md:h-[2.4rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700  flex items-center justify-center text-gray-700">
                             <h6 className="text-center">4</h6>
                         </div>
 
-                        <div className='text-black basis-full'>
+                        <div className='text-black basis-full lg:basis-[90%] lg:mx-7'>
                             <h3 className=' font-bold text-sm md:text-xl'>What is your pricing structure?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] md:w-[3rem] md:h-[2.6rem] w-[3rem] h-[2rem] border-2 border-grey-700  flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
 
 
                     <div className="p-4 flex flex-row gap-6 items-center border-b-2 border-[#c6c6c6] ">
-                        <div className="lg:w-[3rem] lg:h-[2.6rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700 shadow-md flex items-center justify-center text-gray-700">
+                        <div className="lg:w-[2rem] lg:h-[1.9rem] md:w-[3rem] md:h-[2.4rem] w-[3rem] h-[2rem] rounded-full border-2 border-grey-700  flex items-center justify-center text-gray-700">
                             <h6 className="text-center">5</h6>
                         </div>
 
-                        <div className='text-black basis-full'>
+                        <div className='text-black basis-full lg:basis-[90%] lg:mx-7'>
                             <h3 className=' font-bold text-sm md:text-xl'>Can you help with rebranding an existing company?</h3>
                         </div>
-                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] w-[3rem] h-[2rem] border-2 border-grey-700 shadow-md flex justify-center items-center cursor-pointer">
+                        <div className="bg-white text-grey-700 rounded-full lg:w-[3rem] lg:h-[2.9rem] md:w-[3rem] md:h-[2.6rem] w-[3rem] h-[2rem] border-2 border-grey-700  flex justify-center items-center cursor-pointer">
                             <FaMinus />
                         </div>
                     </div>
