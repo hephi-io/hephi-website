@@ -11,6 +11,10 @@ import PictureOne from "./assets/pngs/Frame 1321313983.png"
 import PictureTwo from "./assets/pngs/Union.png"
 import PictureFive from "./assets/pngs/jpeg-optimizer_7557cda1e32882648d3615337d075753.png"
 import PictureSix from "./assets/pngs/dna-pic.png"
+import PictureSeven from "./assets/pngs/zipkod-phone.png"
+import PictureEight from "./assets/pngs/arriving-notification.png"
+import PictureNine from "./assets/pngs/phones.png"
+import PictureTen from "./assets/pngs/moove.png"
 
 import PictureThree from "./assets/jpegs/7821a48dba989370aabe20e25ad825ee.jpeg"
 import PictureFour from "./assets/jpegs/trading-view-photo.jpeg"
@@ -725,6 +729,192 @@ export default function Home() {
 
         </div>
 
+      </section>
+
+      <section className="mb-24">
+        <div className="w-[90%] mx-auto">
+
+          <div className="font-normal text-base leading-[19.2px] text-[#2B2B2B] mb-6">
+            RECENT WORK
+          </div>
+
+          <div className="font-normal text-[32px] leading-[32px] text-[#363636] mb-10">
+            Where Your Challenges Become Our Creative Playground.
+          </div>
+
+          <div>
+
+            <div className="rounded-3xl bg-[#4795FF] py-4 mb-6">
+              <div className="w-[90%] mx-auto">
+
+                <div className="h-[400px] rounded-[10px] mb-8">
+                  <Image
+                    src={PictureSeven}
+                    alt="" 
+                    className="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+
+                <div className="flex justify-between items-start mb-4">
+
+                  <span className="font-normal text-2xl leading-6 text-white">
+                    Zipkod Logistics
+                  </span>
+
+                  <span className="font-normal text-sm leading-[14px] text-white">
+                    2024
+                  </span>
+
+                </div>
+
+                <div className="flex gap-x-1 items-center mb-1">
+
+                  <div className="rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white">
+                    Branding
+                  </div>
+
+                  <div className="rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white">
+                    Web development
+                  </div>
+
+                </div>
+
+                <div className="inline-block rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white">
+                  App development
+                </div>
+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border bg-[#F3F3F3] py-4 mb-6">
+              <div className="w-[90%] mx-auto">
+
+                <div className="h-[400px] rounded-[7px] mb-8">
+                  <Image
+                    src={PictureEight}
+                    alt="" 
+                    className="w-full h-full rounded-[7px] object-cover"
+                  />
+                </div>
+
+                <div className="flex justify-between items-start mb-4">
+
+                  <span className="font-normal text-2xl leading-6 text-[#363636]">
+                    Tribevibe
+                  </span>
+
+                  <span className="font-normal text-sm leading-[14px] text-[#363636]">
+                    2023
+                  </span>
+
+                </div>
+
+                <div className="flex gap-x-1 items-center">
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Branding
+                  </div>
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Web development
+                  </div>
+
+                </div>
+
+                <div className="hidden rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white mt-1">
+                  App development
+                </div>
+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border bg-[#F3F3F3] py-4 mb-6">
+              <div className="w-[90%] mx-auto">
+
+                <div className="h-[400px] rounded-[7px] mb-8">
+                  <Image
+                    src={PictureFive}
+                    alt="" 
+                    className="w-full h-full rounded-[7px] object-cover"
+                  />
+                </div>
+
+                <div className="flex justify-between items-start mb-4">
+
+                  <span className="font-normal text-2xl leading-6 text-[#363636]">
+                    Sunk
+                  </span>
+
+                  <span className="font-normal text-sm leading-[14px] text-[#363636]">
+                    2023
+                  </span>
+
+                </div>
+
+                <div className="flex gap-x-1 items-center">
+
+                  <div className="hidden rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Branding
+                  </div>
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Web development
+                  </div>
+
+                </div>
+
+                <div className="hidden rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white mt-1">
+                  App development
+                </div>
+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border bg-[#F3F3F3] py-4 mb-6">
+              <div className="w-[90%] mx-auto">
+
+                <div className="h-[400px] rounded-[7px] mb-8">
+                  <Image
+                    src={PictureTen}
+                    alt="" 
+                    className="w-full h-full rounded-[7px] object-cover"
+                  />
+                </div>
+
+                <div className="flex justify-between items-start mb-4">
+
+                  <span className="font-normal text-2xl leading-6 text-[#363636]">
+                    Moove
+                  </span>
+
+                  <span className="font-normal text-sm leading-[14px] text-[#363636]">
+                    2023
+                  </span>
+
+                </div>
+
+                <div className="hidden gap-x-1 items-center mb-1">
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Web development
+                  </div>
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    App development
+                  </div>
+
+                </div>
+
+                <div className="inline-block rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                  App development
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
     </main>
