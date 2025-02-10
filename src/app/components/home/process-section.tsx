@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from "next/image"
 
+import Heading from "@/app/components/shared/heading"
+
 import Star from "@/app/assets/pngs/star (1).png"
 import Brain from "@/app/assets/pngs/braain.png"
 import Jotter from "@/app/assets/pngs/jotter.png"
@@ -59,9 +61,9 @@ const ProcessSection = () => {
     <section className="mb-24 sm:mb-[120px]">
       <div className="w-[90%] mx-auto sm:w-[94.24%] md:w-[96.66%]">
 
-        <div className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6">
+        <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6" text="">
           PROCESS
-        </div>
+        </Heading>
 
         <div className="flex flex-col gap-y-6 sm:grid sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
           { processSectionCards.map(( processSectionCard, index ) => (
@@ -69,15 +71,15 @@ const ProcessSection = () => {
 
               <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between sm:w-[81.10%] sm:h-[368px] md:w-[83.92%]">
 
-                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center text-base leading-4 text-[#363636]">
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center text-base leading-4 text-[#363636] z-10">
                   { processSectionCard.number }
                 </div>
 
                 <div>
 
-                  <div className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 md:text-4xl md:leading-9">
+                  <Heading as="div" className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 md:text-4xl md:leading-9" text="">
                     { processSectionCard.header }
-                  </div>
+                  </Heading>
 
                   <div className="text-base leading-4 text-[#363636] sm:text-xl sm:leading-5 mt-6">
                     { processSectionCard.paragraphText }

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 import SectionHeader from "@/app/components/home/section-header";
+import Heading from "@/app/components/shared/heading"
 
 import PictureFive from "@/app/assets/pngs/jpeg-optimizer_7557cda1e32882648d3615337d075753.png";
 import PictureSeven from "@/app/assets/pngs/zipkod-phone.png";
@@ -99,9 +100,9 @@ const RecentWork = () => {
                       </div>
 
                       <div>
-                        <div className="text-2xl leading-6 text-[#363636] group-hover:text-white sm:text-5xl sm:leading-[48px] mb-4">
+                        <Heading as="div" className="text-2xl leading-6 text-[#363636] group-hover:text-white sm:text-5xl sm:leading-[48px] mb-4" text="">
                           {recentWorkCard.header}
-                        </div>
+                        </Heading>
 
                         <div className="flex gap-x-1 items-center opacity-80 mb-1 sm:mb-0">
                           <Badge text={recentWorkCard.badgeOne} style="" />

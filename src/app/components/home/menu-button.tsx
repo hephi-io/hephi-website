@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from "next/image"
 
+import Heading from "@/app/components/shared/heading"
+
 import MenuIcon from "@/app/assets/svgs/menu-icon.svg"
 
 const MenuButton = () => {
@@ -11,9 +13,12 @@ const MenuButton = () => {
 
         <Image src={MenuIcon} width={20.56} height={20.56} alt="Menu Icon" />
 
-        <div className="font-normal text-lg leading-[21.6px] text-[#2B2B2B]">
+        {/* <div className={ `text-lg leading-[21.6px] text-[#2B2B2B]` }>
           Menu
-        </div>
+        </div> */}
+        <Heading as="div" className="text-lg leading-[21.6px] text-[#2B2B2B]" text="Menu">
+          Menu
+        </Heading>
 
       </div>
     </button>

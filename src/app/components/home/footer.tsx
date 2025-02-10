@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from "next/image";
 
+import Heading from "@/app/components/shared/heading"
+
 import Arrow from "@/app/assets/svgs/arrow-forward.svg"
 
 const footer = () => {
@@ -19,18 +21,18 @@ const footer = () => {
 
           <div className="md:flex md:justify-between md:items-start">
 
-            <div className="text-4xl leading-9 text-white sm:w-[57.04%] sm:text-5xl sm:leading-[48px] md:w-[31.92%] md:text-[54px] md:leading-[54px]">
+            <Heading as="div" className="text-4xl leading-9 text-white sm:w-[57.04%] sm:text-5xl sm:leading-[48px] md:w-[31.92%] md:text-[54px] md:leading-[54px]" text="">
               We&apos;re excited to bring your next ideas to life
-            </div>
+            </Heading>
 
             <div className="mt-10 rounded-3xl bg-white md:mt-0 md:w-[37.91%] py-6 md:py-9">
               <div className="w-[86.7%] mx-auto sm:w-[93.5%] sm:flex sm:justify-between sm:items-start md:w-[85.6%] md:block">
 
                 <div className="sm:w-[51.81%] md:w-[83.53%]">
 
-                  <div className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 md:text-[32px] md:leading-8">
+                  <Heading as="div" className="text-2xl leading-6 text-[#363636] sm:text-[28px] sm:leading-7 md:text-[32px] md:leading-8" text="">
                     Get in touch
-                  </div>
+                  </Heading>
 
                   <div className="text-base leading-[19.2px] text-[#6F6F6F] sm:text-xl sm:leading-6 mt-6 md:mt-4">
                     Are you a brand or company in need of contagiously creative

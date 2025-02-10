@@ -3,6 +3,7 @@ import React from 'react'
 import Image from "next/image"
 
 import SectionHeader from "@/app/components/home/section-header"
+import Heading from "@/app/components/shared/heading"
 
 import Add from "@/app/assets/svgs/add.svg"
 import Remove from "@/app/assets/svgs/remove.svg"
@@ -73,9 +74,9 @@ const FAQSection = () => {
 
                   <div>
 
-                    <div className={`text-2xl leading-6 ${(faqAccordion.isExpanded) ? "text-white" : "text-[#363636]"} sm:text-[28px] sm:leading-7 md:text-[32px] md:leading-8`}>
+                    <Heading as="div" className={`text-2xl leading-6 ${(faqAccordion.isExpanded) ? "text-white" : "text-[#363636]"} sm:text-[28px] sm:leading-7 md:text-[32px] md:leading-8`} text="">
                       {faqAccordion.heading}
-                    </div>
+                    </Heading>
 
                     <div className={`opacity-80 text-base leading-[19.2px] ${(!faqAccordion.isExpanded) ? "hidden text-[#363636]" : "text-white"} mt-4 sm:text-xl sm:leading-6`}>
                       {faqAccordion.paragraph}
