@@ -71,7 +71,8 @@ const RecentWork = () => {
 
   return (
     <section className="mb-24 sm:mb-[120px]">
-      <div className="w-[90%] mx-auto sm:w-[94.24%] md:w-[96.66%]">
+      <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
+
         <SectionHeader
           header="RECENT WORK"
           subHeader="Where Your Challenges Become Our Creative Playground."
@@ -79,71 +80,82 @@ const RecentWork = () => {
 
         <div>
           {recentWorkCards.map((recentWorkCard, index) => (
-            <div className="md:border-b md:border-b-[#C6C6C6] md:hover:border-none">
-              <div
-                key={index}
-                className="group rounded-2xl border border-[#C6C6C6] bg-[#F3F3F3] hover:rounded-3xl hover:bg-[#4795FF] hover:border-none sm:rounded-[32px] md:border-none md:bg-white py-4 sm:py-6 md:py-9 mb-6 md:mb-0"
-              >
-                <div className="w-[90%] mx-auto sm:w-[93.89%] md:w-[94.82%]">
-                  <div className="h-[400px] rounded-[10px] mb-8 sm:h-[485px] sm:mb-12 sm:rounded-3xl md:hidden">
-                    <Image
-                      src={recentWorkCard.picturePath}
-                      alt=""
-                      className="w-full h-full rounded-[10px] object-cover sm:rounded-3xl"
-                    />
-                  </div>
+          <div key={ index } className="lg:border-b lg:border-b-[#C6C6C6] lg:hover:border-none">
+            <div
+              key={index}
+              className="group rounded-2xl border border-[#C6C6C6] bg-[#F3F3F3] hover:rounded-3xl hover:bg-[#4795FF] hover:border-none sm:rounded-[32px] lg:border-none lg:bg-white py-4 sm:py-6 lg:py-9 mb-6 lg:mb-0"
+            >
+              <div className="w-[90%] mx-auto sm:w-[93.89%] lg:w-[94.82%]">
 
-                  <div className="flex justify-between items-start md:items-center mb-4">
-                    <div className="sm:flex sm:gap-x-10 sm:items-start md:gap-x-14">
-                      <div className="hidden sm:block sm:text-base sm:leading-4 sm:text-[#363636] sm:group-hover:text-white">
-                        {recentWorkCard.date}
-                      </div>
+                <div className="h-[400px] rounded-[10px] mb-8 sm:h-[485px] sm:mb-12 sm:rounded-3xl lg:hidden">
+                  <Image
+                    src={recentWorkCard.picturePath}
+                    alt=""
+                    className="w-full h-full rounded-[10px] object-cover sm:rounded-3xl"
+                  />
+                </div>
 
-                      <div>
-                        <Heading as="div" className="text-2xl leading-6 text-[#363636] group-hover:text-white sm:text-5xl sm:leading-[48px] mb-4" text="">
-                          {recentWorkCard.header}
-                        </Heading>
+                <div className="flex justify-between items-start lg:items-center mb-4">
 
-                        <div className="flex gap-x-1 items-center opacity-80 mb-1 sm:mb-0">
-                          <Badge text={recentWorkCard.badgeOne} style="" />
+                  <div className="sm:flex sm:gap-x-10 sm:items-start lg:gap-x-14">
 
-                          <Badge
-                            text={recentWorkCard.badgeTwo}
-                            style={`${!recentWorkCard.badgeTwo && "hidden"}`}
-                          />
+                    <div className="hidden sm:block sm:text-base sm:leading-4 sm:text-[#363636] sm:group-hover:text-white">
+                      {recentWorkCard.date}
+                    </div>
 
-                          <Badge
-                            text={recentWorkCard.badgeThree}
-                            style={`hidden sm:block ${
-                              !recentWorkCard.badgeThree && "sm:hidden"
-                            }`}
-                          />
-                        </div>
+                    <div>
+
+                      <Heading as="div" className="text-2xl leading-6 text-[#363636] group-hover:text-white sm:text-5xl sm:leading-[48px] mb-4" text="">
+                        {recentWorkCard.header}
+                      </Heading>
+
+                      <div className="flex gap-x-1 items-center opacity-80 mb-1 sm:mb-0">
+
+                        <Badge text={recentWorkCard.badgeOne} style="" />
+
+                        <Badge
+                          text={recentWorkCard.badgeTwo}
+                          style={`${!recentWorkCard.badgeTwo && "hidden"}`}
+                        />
 
                         <Badge
                           text={recentWorkCard.badgeThree}
-                          style={`${
-                            !recentWorkCard.badgeThree
-                              ? "hidden"
-                              : "inline-block"
-                          } sm:hidden`}
+                          style={`hidden sm:block ${
+                            !recentWorkCard.badgeThree && "sm:hidden"
+                          }`}
                         />
+
                       </div>
+
+                      <Badge
+                        text={recentWorkCard.badgeThree}
+                        style={`${
+                          !recentWorkCard.badgeThree
+                            ? "hidden"
+                            : "inline-block"
+                        } sm:hidden`}
+                      />
+
                     </div>
 
-                    <div className="hidden sm:w-[42px] sm:h-[42px] sm:flex sm:justify-center sm:items-center sm:border sm:border-[#C6C6C6] sm:rotate-45 sm:rounded-full sm:text-[#C6C6C6] sm:transition-all sm:duration-300 sm:group-hover:bg-white sm:group-hover:text-[#151313] sm:group-hover:border-none sm:group-hover:-rotate-12">
-                      <ArrowIcon />
-                    </div>
-
-                    <span className="text-sm leading-[14px] text-[#363636] group-hover:text-white sm:hidden">
-                      {recentWorkCard.date}
-                    </span>
                   </div>
+
+                  <div className="hidden sm:w-[42px] sm:h-[42px] sm:flex sm:justify-center sm:items-center sm:border sm:border-[#C6C6C6] sm:rotate-45 sm:rounded-full sm:text-[#C6C6C6] sm:transition-all sm:duration-300 sm:group-hover:bg-white sm:group-hover:text-[#151313] sm:group-hover:border-none sm:group-hover:-rotate-12">
+                    <ArrowIcon />
+                  </div>
+
+                  <span className="text-sm leading-[14px] text-[#363636] group-hover:text-white sm:hidden">
+                    {recentWorkCard.date}
+                  </span>
+
                 </div>
+
               </div>
             </div>
+          </div>
           ))}
         </div>
+
       </div>
     </section>
   );

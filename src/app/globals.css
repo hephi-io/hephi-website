@@ -53,7 +53,7 @@ body {
 }
 
 .marquee {
-  animation: loop 30s linear infinite;
+  animation: loop 40s linear infinite;
 }
 
 @keyframes loop {
@@ -61,7 +61,7 @@ body {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-60%);
   }
 }
 

@@ -5,10 +5,10 @@ import { Francois_One } from "next/font/google"
 const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] })
 
 interface IHeadingProps {
-  text: string,
+  text?: string,
   className: string,
   as: string,
-  children: ReactNode
+  children?: ReactNode
 }
 
 const Heading = (props: IHeadingProps) => {

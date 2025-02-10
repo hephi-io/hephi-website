@@ -13,11 +13,11 @@ const SectionHeader = ( props: ISectionHeaderProps ) => {
   return (
     <div className="sm:flex sm:justify-between sm:items-start mb-10">
 
-      <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] md:text-xl md:leading-6 mb-6" text="">
+      <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] lg:text-xl lg:leading-6 mb-6">
         { header }
       </Heading>
 
-      <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] sm:w-[63.61%] md:w-[35.95%] md:text-5xl md:leading-[48px]" text="">
+      <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] sm:w-[63.61%] lg:w-[35.95%] lg:text-5xl lg:leading-[48px]">
         { subHeader }
       </Heading>
 

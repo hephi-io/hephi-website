@@ -11,23 +11,23 @@ import BigPictureTwo from "@/app/assets/pngs/logo-with-union.png"
 
 const About = () => {
   return (
-    <section className="bg-[#F3F3F3] pb-4 pt-12 sm:p-0 mb-24 sm:bg-white sm:mt-4 sm:mb-[120px]">
-      <div className="w-[90%] mx-auto sm:w-[94.25%] md:w-[96.66%] md:h-[563px] md:flex md:justify-between">
+    <section className="bg-[#F3F3F3] sm:bg-white pb-4 pt-12 sm:p-0 mb-24 sm:mt-4 sm:mb-[120px]">
+      <div className="w-[90%] mx-auto sm:w-[94.25%] lg:max-w-[1391px] lg:h-[563px] lg:flex lg:justify-between">
 
-        <div className="sm:rounded-[42px] sm:border sm:border-[#EBEBED] sm:py-9 sm:bg-[#F3F3F3] md:w-[41.12%]">
-          <div className="sm:w-[90.84%] sm:mx-auto md:w-[87.41%] md:h-full md:flex md:flex-col md:justify-between">
+        <div className="sm:rounded-[42px] sm:border sm:border-[#EBEBED] sm:py-9 sm:bg-[#F3F3F3] lg:w-[41.12%]">
+          <div className="sm:w-[90.84%] sm:mx-auto lg:w-[87.41%] lg:h-full lg:flex lg:flex-col lg:justify-between">
 
-            <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-20 sm:mb-40 md:mb-0" text="">
+            <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-20 sm:mb-40 lg:mb-0">
               ABOUT
             </Heading>
             
             <div>
 
-              <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] mb-6" text="">
+              <Heading as="div" className="text-[32px] leading-[32px] text-[#363636] mb-6">
                 Crafting World-Class Digital Products for All
               </Heading>
 
-              <div className="fobt-normal text-base leading-[19.2px] text-[#6F6F6F] mb-12 sm:mb-0">
+              <div className="text-base leading-[19.2px] text-[#6F6F6F] mb-12 sm:mb-0">
                 we are driven by a passion for innovation and a commitment to
                 excellence. Our mission is to empower businesses and individuals to
                 achieve their goals through cutting-edge digital solutions. We
@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative sm:mt-4 md:mt-0 md:w-[57.73%]">
+        <div className="relative sm:mt-4 lg:mt-0 lg:w-[57.73%]">
 
           <Image src={PictureTwo} alt="" className="w-full h-[563px] sm:hidden" />
 
