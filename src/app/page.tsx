@@ -15,6 +15,10 @@ import PictureSeven from "./assets/pngs/zipkod-phone.png"
 import PictureEight from "./assets/pngs/arriving-notification.png"
 import PictureNine from "./assets/pngs/phones.png"
 import PictureTen from "./assets/pngs/moove.png"
+import Star from "./assets/pngs/star (1).png"
+import Brain from "./assets/pngs/braain.png"
+import Jotter from "./assets/pngs/jotter.png"
+import Plus from "./assets/pngs/plus.png"
 
 import PictureThree from "./assets/jpegs/7821a48dba989370aabe20e25ad825ee.jpeg"
 import PictureFour from "./assets/jpegs/trading-view-photo.jpeg"
@@ -875,6 +879,48 @@ export default function Home() {
 
                 <div className="h-[400px] rounded-[7px] mb-8">
                   <Image
+                    src={PictureNine}
+                    alt="" 
+                    className="w-full h-full rounded-[7px] object-cover"
+                  />
+                </div>
+
+                <div className="flex justify-between items-start mb-4">
+
+                  <span className="font-normal text-2xl leading-6 text-[#363636]">
+                    Kodest Invest
+                  </span>
+
+                  <span className="font-normal text-sm leading-[14px] text-[#363636]">
+                    2023
+                  </span>
+
+                </div>
+
+                <div className="flex gap-x-1 items-center">
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    Web development
+                  </div>
+
+                  <div className="rounded-[5px] border border-[#A3A3A3] px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-[#A3A3A3]">
+                    App development
+                  </div>
+
+                </div>
+
+                <div className="hidden rounded-[5px] border border-white px-[6px] py-1 font-normal text-[13px] leading-[15.6px] text-white mt-1">
+                  App development
+                </div>
+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border bg-[#F3F3F3] py-4 mb-6">
+              <div className="w-[90%] mx-auto">
+
+                <div className="h-[400px] rounded-[7px] mb-8">
+                  <Image
                     src={PictureTen}
                     alt="" 
                     className="w-full h-full rounded-[7px] object-cover"
@@ -910,6 +956,212 @@ export default function Home() {
                 </div>
 
               </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section className="mb-24">
+        <div className="w-[90%] mx-auto">
+
+          <div className="font-normal text-base leading-[19.2px] text-[#2B2B2B] mb-10">
+            PROCESS
+          </div>
+
+          <div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  1
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Discovery
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    We dive deep into understanding your business, goals, and challenges to set the foundation.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Star}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
+            </div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  2
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Strategy & Ideation
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    Combining research with creative brainstorming, we develop a strategic plan tailored to your vision.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Brain}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
+            </div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  3
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Design & Development
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    Our team brings your ideas to life, crafting and refining the design and building the digital solution.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Jotter}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
+            </div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  4
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Review & Refine
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    We collaborate closely with you to review the work and fine-tune it based on your feedback.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Plus}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
+            </div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  5
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Launch
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    We launch the final product, ensuring it’s optimized for success from day one.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Star}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
+            </div>
+
+            <div className="relative rounded-3xl bg-[#F3F3F3] py-6 mb-6">
+
+              <div className="w-[90%] h-[252px] mx-auto flex flex-col justify-between">
+
+                <div className="w-9 h-9 rounded-full border border-[#363636] flex justify-center items-center font-normal text-base leading-4 text-[#363636]">
+                  6
+                </div>
+
+                <div>
+
+                  <div className="font-normal text-2xl leading-6 text-[#363636]">
+                    Support & Optimization
+                  </div>
+
+                  <div className="font-normal text-base leading-4 text-[#363636] mt-6">
+                    After launch, we continue to support and enhance your product to keep it aligned with your evolving needs.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="absolute left-[25%] bottom-[53%] w-[44.17%] h-[200px]">
+                <Image
+                  src={Star}
+                  alt=""
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+
             </div>
 
           </div>
