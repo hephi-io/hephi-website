@@ -1,5 +1,6 @@
 "use client";
 
+
 import NavBar from "@/app/components/home/nav-bar"
 import Hero from "@/app/components/home/hero"
 import About from "@/app/components/home/about"
@@ -35,7 +36,7 @@ export default function Home() {
       <FAQSection />
 
       <Footer />
-      
+
     </main>
   );
 }

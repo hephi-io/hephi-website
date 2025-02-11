@@ -75,7 +75,7 @@ const Marquee = (props: IMarqueeProps) => {
 
           <div className={ `w-[30.25px] h-[30.25px] rounded-full bg-[#D9D9D9] shrink-0 ${ ( marqueeItem.picturePath ) && "hidden" }` }></div>
 
-          <div className={ `w-[${marqueeItem.pictureWidth}px] h-[60.5px] shrink-0 ${ ( !marqueeItem.picturePath ) && "hidden" }` }>
+          <div className={ `w-[${marqueeItem.pictureWidth}px] h-[60.5px] shrink-0 ${ ( !marqueeItem.picturePath ) && "hidden" } relative` }>
             <Image
               src={ marqueeItem.picturePath }
               width={ undefined }
