@@ -19,7 +19,7 @@ const Scope = () => {
   const images = [ 1, 2, 3 ]
 
   return (
-    <Wrapper>
+    <Wrapper className="mb-12">
       <Container>
 
         <HeadingThree>
@@ -27,14 +27,14 @@ const Scope = () => {
         </HeadingThree>
 
         <ParagraphBlock className="mt-10">
-          { paragraphs.map( ( paragraphItem ) => (
-          <Paragraph key={ paragraphItem }>
+          { paragraphs.map( ( paragraphId ) => (
+          <Paragraph key={ paragraphId }>
             { paragraph }
           </Paragraph>    
           ) ) }  
         </ParagraphBlock>
 
-        <div className="flex flex-col gap-y-4 mt-10">
+        <section className="flex flex-col gap-y-4 mt-10">
           { images.map( ( image ) => (
           <div key={ image } className="h-[380px] rounded-3xl">
             <Image
@@ -46,7 +46,7 @@ const Scope = () => {
             />
           </div>  
           ) ) }
-        </div>
+        </section>
 
       </Container>
     </Wrapper>

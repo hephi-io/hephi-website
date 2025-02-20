@@ -9,7 +9,13 @@ import Brain from "@/app/assets/pngs/braain.png"
 import Jotter from "@/app/assets/pngs/jotter.png"
 import Plus from "@/app/assets/pngs/plus.png"
 
-const ProcessSection = () => {
+
+interface IProcessSection {
+  page?: string
+}
+
+const ProcessSection = ( props: IProcessSection ) => {
+  const { page } = props
 
   const processSectionCards = [
 
@@ -58,7 +64,7 @@ const ProcessSection = () => {
   ]
 
   return (
-    <section className="mb-24 sm:mb-[120px]">
+    <section className={ `${ ( page === "portfolio" ? "mb-12" : "mb-24" ) } sm:mb-[120px]` }>
       <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
 
         <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6">
