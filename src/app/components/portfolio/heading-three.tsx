@@ -1,15 +1,14 @@
-import React, {ReactNode} from 'react'
+import React from 'react'
 
-import { Francois_One } from "next/font/google"
+import { IProps } from "@/app/components/portfolio/wrapper"
 
-import { IHeadingTwoProps } from "@/app/components/portfolio/heading-two"
+import { francoisOne } from "@/app/components/shared/heading"
 
-const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] })
 
-const HeadingThree = ( props: IHeadingTwoProps ) => {
+const HeadingThree = ( props: IProps ) => {
   const { className, as, children } = props
 
-  return React.createElement( as || "h1", { className: `${ francoisOne.className } ${ className ? className : "" } text-base leading-[19.9px] tracking-normal text-[#2B2B2B]` }, children )
+  return React.createElement( as || "h3", { className: `${ francoisOne.className } ${ className ? className : "" } text-base leading-[19.9px] tracking-normal text-[#2B2B2B]` }, children )
 }
 
 export default HeadingThree
