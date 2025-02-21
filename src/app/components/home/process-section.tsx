@@ -10,11 +10,11 @@ import Jotter from "@/app/assets/pngs/jotter.png"
 import Plus from "@/app/assets/pngs/plus.png"
 
 
-interface IProcessSection {
+export interface IHomePageComponents {
   page?: string
 }
 
-const ProcessSection = ( props: IProcessSection ) => {
+const ProcessSection = ( props: IHomePageComponents ) => {
   const { page } = props
 
   const processSectionCards = [
