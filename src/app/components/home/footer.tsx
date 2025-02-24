@@ -1,12 +1,16 @@
 import React from 'react'
 
-import Image from "next/image";
+import Image from "next/image"
+
+import { IHomePageComponents } from "@/app/components/home/process-section"
 
 import Heading from "@/app/components/shared/heading"
 
 import Arrow from "@/app/assets/svgs/arrow-forward.svg"
 
-const footer = () => {
+const footer = ( props: IHomePageComponents ) => {
+  const { page } = props
+
   const gridItems = [
     { header: "Office", textOne: "De Corridor 12G", textTwo: "Lekki, Lagos" }, 
     { header: "Call line", textOne: "Mel: +31 6 14 97 98 40", textTwo: "Ikenna: +31 6 51 76 07 63" }, 
@@ -15,7 +19,7 @@ const footer = () => {
   ]
 
   return (
-    <footer>
+    <footer className={ `${ page === "portfolio" && "mb-4"  }` }>
       <div className="bg-[#4795FF] py-9 sm:w-[94.24%] sm:mx-auto sm:rounded-[36px] lg:max-w-[1391px]">
         <div className="w-[90%] mx-auto sm:w-[93.89%] lg:w-[94.82%]">
 

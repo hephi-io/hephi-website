@@ -6,7 +6,7 @@ import { IProps } from '@/app/components/portfolio/wrapper'
 const Paragraph = ( props: IProps ) => {
   const { className, as, children } = props
 
-  return React.createElement( as || "p", { className: `${ className ? className : "" } text-base leading-[19.2px] tracking-normal text-[#6F6F6F]` }, children )
+  return React.createElement( as || "p", { className: `${ className ? className : "" } text-base leading-[19.2px] tracking-normal text-[#6F6F6F] sm:text-xl sm:leading-6` }, children )
 }
 
 export default Paragraph

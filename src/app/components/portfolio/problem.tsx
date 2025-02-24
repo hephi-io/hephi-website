@@ -34,13 +34,13 @@ const Problem = () => {
           ) ) }  
         </ParagraphBlock>
 
-        <BigImageContainer className="mt-6">
+        <BigImageContainer className="mt-6 sm:mt-10">
           <Image
             src={ PeakBig }
             alt=""
             width={ undefined }
             height={ undefined }
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover sm:rounded-[42px]"
           />
         </BigImageContainer>
 
