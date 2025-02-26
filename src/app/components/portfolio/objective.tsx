@@ -4,8 +4,7 @@ import Image from "next/image"
 
 import Wrapper from "@/app/components/portfolio/wrapper"
 import Container from "@/app/components/portfolio/container"
-import HeadingTwo from "@/app/components/portfolio/heading-two"
-import HeadingThree from "@/app/components/portfolio/heading-three"
+import Heading from "@/app/components/shared/heading"
 import Paragraph from "@/app/components/portfolio/paragraph"
 import BigImageContainer from "@/app/components/portfolio/big-image-container"
 
@@ -20,29 +19,33 @@ export const headingText = "From Grass to Grace - A Zipkod story"
 const Objective = () => {
   return (
     <Wrapper>
-      <Container>
+      <Container className="lg:flex lg:justify-between lg:items-start">
 
-        <HeadingThree>
+        <Heading as="h3" className="text-base leading-[19.2px] tracking-normal text-[#2B2B2B] sm:text-xl sm:leading-6">
           OBJECTIVE
-        </HeadingThree>
+        </Heading>
 
-        <HeadingTwo className="mt-10">
-          { headingText }
-        </HeadingTwo>
+        <div className="lg:w-[56.22%]">
 
-        <Paragraph className="mt-4">
-          { paragraph }
-        </Paragraph>
+          <Heading className="text-[28px] leading-7 tracking-normal text-[#363636] lg:text-[32px] lg:leading-8 mt-10 lg:mt-0">
+            { headingText }
+          </Heading>
 
-        <BigImageContainer className="mt-6 sm:mt-10">
-          <Image 
-            src={ PeakBig }
-            alt=""
-            width={ undefined }
-            height={ undefined }
-            className="w-full h-full object-cover sm:rounded-[42px]"
-          />
-        </BigImageContainer>
+          <Paragraph className="mt-4">
+            { paragraph }
+          </Paragraph>
+
+          <BigImageContainer className="mt-6 sm:mt-10">
+            <Image 
+              src={ PeakBig }
+              alt=""
+              width={ undefined }
+              height={ undefined }
+              className="w-full h-full object-cover rounded-3xl sm:rounded-[42px]"
+            />
+          </BigImageContainer>
+
+        </div>
 
       </Container>
     </Wrapper>
