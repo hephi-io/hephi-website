@@ -1,14 +1,12 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-interface IContainerProps {
-  className?: string,
-  children: ReactNode
-}
+import { IProps } from "@/app/components/portfolio/wrapper"
 
-const Container = ( props: IContainerProps ) => {
-  const { className, children } = props
 
-  return React.createElement( "div", { className: `w-[90%] mx-auto ${ className || "" }` }, children )
+const Container = ( props: IProps ) => {
+  const { className, as, children } = props
+
+  return React.createElement( as || "div", { className: `w-[90%] mx-auto ${ className || "" }` }, children )
 }
 
 export default Container

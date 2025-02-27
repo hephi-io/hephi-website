@@ -2,7 +2,9 @@ import React, {ReactNode} from 'react'
 
 import { Francois_One } from "next/font/google"
 
-const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] })
+
+export const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] })
+
 
 interface IHeadingProps {
   text?: string,
