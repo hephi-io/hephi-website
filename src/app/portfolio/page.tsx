@@ -6,7 +6,7 @@ import CaseStudy from "@/app/components/portfolio/case-study"
 import Objective from "@/app/components/portfolio/objective"
 import Problem from "@/app/components/portfolio/problem"
 import Scope from "@/app/components/portfolio/scope"
-import Process from "@/app/components/home/process-section"
+import Process from "@/app/components/portfolio/process-section"
 import Solution from "@/app/components/portfolio/solution"
 import Result from "@/app/components/portfolio/result"
 import RecentWork from "@/app/components/home/recent-work"
@@ -17,18 +17,29 @@ import Footer from "@/app/components/home/footer"
 const Portfolio = () => {
   return (
     <main>
+
       <NavBar />
       <ModeToggle />
       <CaseStudy />
       <Objective />
       <Problem />
       <Scope />
-      <Process page="portfolio" />
+      <Process />
       <Solution />
       <Result />
-      <RecentWork page="portfolio" />
-      <FAQSection page="portfolio" />
-      <Footer page="portfolio" />
+
+      <section className="mb-12 sm:mb-[120px]">
+        <RecentWork />
+      </section>
+
+      <section className="mb-12 sm:mb-[120px]">
+        <FAQSection />
+      </section>
+
+      <footer className="sm:mb-4">
+        <Footer />
+      </footer>
+
     </main>
   )
 }

@@ -10,13 +10,7 @@ import Jotter from "@/app/assets/pngs/jotter.png"
 import Plus from "@/app/assets/pngs/plus.png"
 
 
-export interface IHomePageComponents {
-  page?: string
-}
-
-const ProcessSection = ( props: IHomePageComponents ) => {
-  const { page } = props
-
+const ProcessSection = () => {
   const processSectionCards = [
 
     {
@@ -64,7 +58,7 @@ const ProcessSection = ( props: IHomePageComponents ) => {
   ]
 
   return (
-    <section className={ `${ ( page === "portfolio" ? "mb-12" : "mb-24" ) } sm:mb-[120px]` }>
+    <section className="mb-24 sm:mb-[120px]">
       <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
 
         <Heading as="div" className="text-base leading-[19.2px] text-[#2B2B2B] mb-10 sm:text-xl sm:leading-6">

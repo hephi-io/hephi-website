@@ -27,15 +27,21 @@ export default function Home() {
 
       <ServicesSection />
 
-      <RecentWork />
+      <section className="mb-24 sm:mb-[120px]">
+        <RecentWork />
+      </section>
 
       <ProcessSection />
 
       <TestimonialSection />
 
-      <FAQSection />
+      <section className="mb-24 sm:mb-[120px]">
+        <FAQSection />
+      </section>
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
 
     </main>
   );

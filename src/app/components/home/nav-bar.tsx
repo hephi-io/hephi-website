@@ -1,20 +1,24 @@
 import React from 'react'
 
-import Image from "next/image";
+import Image from "next/image"
+
+import { IHomePageComponents } from "@/app/components/portfolio/process-section"
 
 import MenuButton from "@/app/components/home/menu-button"
 import Heading from "@/app/components/shared/heading"
 
-import Logo from "@/app/assets/svgs/hephi-logo.svg";
-import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
-import DarkIcon from "@/app/assets/svgs/dark-icon.svg";
-import LightIcon from "@/app/assets/svgs/light-icon.svg";
+import Logo from "@/app/assets/svgs/hephi-logo.svg"
+import MenuIcon from "@/app/assets/svgs/menu-icon.svg"
+import DarkIcon from "@/app/assets/svgs/dark-icon.svg"
+import LightIcon from "@/app/assets/svgs/light-icon.svg"
 
-const NavBar = () => {
+const NavBar = ( props: IHomePageComponents ) => {
+  const { page } = props
+
   return (
     <>
 
-      <nav className="sm:hidden fixed z-10 top-4 left-4 right-4 nav h-[54px] mx-auto flex justify-between items-center p-2 pl-4">
+      <nav className="fixed z-10 top-4 left-4 right-4 nav h-[54px] flex justify-between items-center sm:hidden p-2 pl-4 mx-auto">
 
         <div className="pt-2 pb-2">
           <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
@@ -32,7 +36,7 @@ const NavBar = () => {
 
       </nav>
 
-      <nav className="hidden sm:fixed sm:z-10 sm:top-[52px] sm:right-[52px] sm:left-[52px] sm:h-14 sm:flex sm:justify-between sm:items-center lg:right-0 lg:left-0 lg:w-[80%] lg:mx-auto">
+      <nav className="hidden sm:fixed sm:z-10 sm:top-[52px] sm:right-[52px] sm:left-[52px] sm:h-14 sm:flex sm:justify-between sm:items-center lg:right-0 lg:left-0 lg:max-w-[1319px] lg:mx-auto">
         
         <div className="sm:py-2">
           <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
