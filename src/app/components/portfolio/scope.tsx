@@ -1,0 +1,56 @@
+import React from 'react'
+
+import Image from 'next/image'
+
+import Wrapper from "@/app/components/portfolio/wrapper"
+import Container from "@/app/components/portfolio/container"
+import HeadingThree from "@/app/components/portfolio/heading-three"
+import ParagraphBlock from "@/app/components/portfolio/paragraph-block"
+import Paragraph from "@/app/components/portfolio/paragraph"
+
+import { paragraph } from "@/app/components/portfolio/problem"
+
+import PeakSmall from "@/app/assets/pngs/portfolio/peak/small/mobile.png"
+
+
+const Scope = () => {
+  const paragraphs = [ 1, 2 ]
+
+  const images = [ 1, 2, 3 ]
+
+  return (
+    <Wrapper>
+      <Container>
+
+        <HeadingThree>
+          SCOPE
+        </HeadingThree>
+
+        <ParagraphBlock className="mt-10">
+          { paragraphs.map( ( paragraphItem ) => (
+          <Paragraph key={ paragraphItem }>
+            { paragraph }
+          </Paragraph>    
+          ) ) }  
+        </ParagraphBlock>
+
+        <div className="flex flex-col gap-y-4 mt-10">
+          { images.map( ( image ) => (
+          <div key={ image } className="h-[380px] rounded-3xl">
+            <Image
+              src={ PeakSmall }
+              alt=""
+              width={ undefined }
+              height={ undefined }
+              className="w-full h-full object-cover" 
+            />
+          </div>  
+          ) ) }
+        </div>
+
+      </Container>
+    </Wrapper>
+  )
+}
+
+export default Scope

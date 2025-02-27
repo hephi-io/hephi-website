@@ -5,6 +5,8 @@ import ModeToggle from "@/app/components/home/mode-toggle"
 import CaseStudy from "@/app/components/portfolio/case-study"
 import Objective from "@/app/components/portfolio/objective"
 import Problem from "@/app/components/portfolio/problem"
+import Scope from "@/app/components/portfolio/scope"
+
 
 const Portfolio = () => {
   return (
@@ -14,6 +16,7 @@ const Portfolio = () => {
       <CaseStudy />
       <Objective />
       <Problem />
+      <Scope />
     </main>
   )
 }
