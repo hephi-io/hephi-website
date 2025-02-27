@@ -10,7 +10,7 @@ export interface IProps {
 const Wrapper = ( props: IProps ) => {
   const { className, as, children } = props
 
-  return React.createElement( as || "section", { className: `py-12 ${ className  || "" }` }, children )
+  return React.createElement( as || "section", { className: `py-12 sm:py-0 sm:mb-[120px] ${ className  || "" }` }, children )
 }
 
 export default Wrapper

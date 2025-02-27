@@ -39,7 +39,7 @@ const Solution = () => {
             alt=""
             width={ undefined }
             height={ undefined }
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-3xl sm:rounded-[42px]"
           />
         </BigImageContainer>
 

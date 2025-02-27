@@ -28,7 +28,7 @@ const Portfolio = () => {
       <Result />
       <RecentWork page="portfolio" />
       <FAQSection page="portfolio" />
-      <Footer />
+      <Footer page="portfolio" />
     </main>
   )
 }
