@@ -6,8 +6,8 @@ const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] })
 
 interface IHeadingProps {
   text?: string,
-  className: string,
-  as: string,
+  className?: string,
+  as?: string,
   children?: ReactNode
 }
 
