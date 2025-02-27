@@ -2,13 +2,17 @@ import React from 'react'
 
 import Image from "next/image"
 
+import { IHomePageComponents } from "@/app/components/home/process-section"
+
 import SectionHeader from "@/app/components/home/section-header"
 import Heading from "@/app/components/shared/heading"
 
 import Add from "@/app/assets/svgs/add.svg"
 import Remove from "@/app/assets/svgs/remove.svg"
 
-const FAQSection = () => {
+
+const FAQSection = ( props: IHomePageComponents ) => {
+  const { page } = props
 
   const faqAccordions = [
 
@@ -55,7 +59,7 @@ const FAQSection = () => {
   ]
 
   return (
-    <section className="mb-24 sm:mb-[120px]">
+    <section className={ `${ page === "portfolio" ? "mb-12" : "mb-24" } sm:mb-[120px]` }>
       <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
 
         <SectionHeader header="FAQ" subHeader="Got Questions? We&apos;ve Got Answers." />

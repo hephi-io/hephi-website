@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import { IHomePageComponents } from "@/app/components/home/process-section";
+
 import SectionHeader from "@/app/components/home/section-header";
 import Heading from "@/app/components/shared/heading"
 
@@ -10,6 +12,7 @@ import PictureSeven from "@/app/assets/pngs/zipkod-phone.png";
 import PictureEight from "@/app/assets/pngs/arriving-notification.png";
 import PictureNine from "@/app/assets/pngs/phones.png";
 import PictureTen from "@/app/assets/pngs/moove.png";
+
 
 const ArrowIcon = () => {
   return (
@@ -25,7 +28,9 @@ const ArrowIcon = () => {
   );
 };
 
-const RecentWork = () => {
+const RecentWork = ( props: IHomePageComponents ) => {
+  const { page } = props
+
   const recentWorkCards = [
     {
       picturePath: PictureSeven,
@@ -70,7 +75,7 @@ const RecentWork = () => {
   ];
 
   return (
-    <section className="mb-24 sm:mb-[120px]">
+    <section className={ `${ page === "portfolio" ? "mb-12" : "mb-24" } sm:mb-[120px]` }>
       <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
 
         <SectionHeader

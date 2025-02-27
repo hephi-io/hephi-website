@@ -8,6 +8,10 @@ import Problem from "@/app/components/portfolio/problem"
 import Scope from "@/app/components/portfolio/scope"
 import Process from "@/app/components/home/process-section"
 import Solution from "@/app/components/portfolio/solution"
+import Result from "@/app/components/portfolio/result"
+import RecentWork from "@/app/components/home/recent-work"
+import FAQSection from "@/app/components/home/faq-section"
+import Footer from "@/app/components/home/footer"
 
 
 const Portfolio = () => {
@@ -21,6 +25,10 @@ const Portfolio = () => {
       <Scope />
       <Process page="portfolio" />
       <Solution />
+      <Result />
+      <RecentWork page="portfolio" />
+      <FAQSection page="portfolio" />
+      <Footer />
     </main>
   )
 }
