@@ -69,3 +69,16 @@ body {
   box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
   backdrop-filter: blur(15px);
 }
+
+.infinite-spin {
+  animation: infinite-spin 40s linear infinite;
+}
+
+@keyframes infinite-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
