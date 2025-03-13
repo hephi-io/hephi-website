@@ -2,8 +2,6 @@ import React from 'react'
 
 import Image from "next/image"
 
-import { IHomePageComponents } from "@/app/components/portfolio/process-section"
-
 import MenuButton from "@/app/components/home/menu-button"
 import Heading from "@/app/components/shared/heading"
 
@@ -12,9 +10,7 @@ import MenuIcon from "@/app/assets/svgs/menu-icon.svg"
 import DarkIcon from "@/app/assets/svgs/dark-icon.svg"
 import LightIcon from "@/app/assets/svgs/light-icon.svg"
 
-const NavBar = ( props: IHomePageComponents ) => {
-  const { page } = props
-
+const NavBar = () => {
   return (
     <>
 
