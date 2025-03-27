@@ -17,7 +17,7 @@ const MenuButton = ( props: IMenuButtonProps ) => {
 
   return (
     <button 
-      className="rounded p-2 bg-white flex gap-x-2 sm:rounded-full sm:justify-center sm:items-center sm:h-10 sm:mr-2" 
+      className="rounded p-2 bg-white flex gap-x-2 hover:cursor-pointer sm:rounded-full sm:justify-center sm:items-center sm:h-10 sm:mr-2" 
       onClick={ () => { handleMenu( !menuState ) } }
     >
       <div className="sm:flex sm:gap-x-2">

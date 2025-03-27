@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 
 import Image from "next/image"
+import Link from 'next/link'
 
 import MenuButton from "@/app/components/home/menu-button"
 import Heading from "@/app/components/shared/heading"
@@ -20,7 +21,12 @@ import CancelIcon from "@/app/assets/svgs/cancel-icon.svg"
 
 
 const NavBar = () => {
-  const links = [ { id: 1, name: "HOME" }, { id: 2, name: "WORK" }, { id: 3, name: "ABOUT" }, { id: 4, name: "CONTACT US" } ]
+  const links = [ 
+    { id: 1, name: "HOME", href: "/" }, 
+    { id: 2, name: "WORK", href: "/portfolio" }, 
+    { id: 3, name: "ABOUT", href: "" }, 
+    { id: 4, name: "CONTACT US", href: "/contact" } 
+  ]
   
   const emails = [ { id: 1, address: "info@hephi.io" }, { id: 2, address: "careers@hephi.io" } ]
 
@@ -46,7 +52,7 @@ const NavBar = () => {
           <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
         </div>
 
-        <button className="rounded p-2 bg-white flex gap-x-2" onClick={ () => { setMenuState( !menuState ) } }>
+        <button className="rounded p-2 bg-white flex gap-x-2 hover:cursor-pointer" onClick={ () => { setMenuState( !menuState ) } }>
           <Image src={ ( !menuState ) ? MenuIcon : CancelIcon } width={ 20.56 } height={ 20.56 } alt="Menu Icon" />
 
           <Heading as="div" className="text-lg leading-[21.6px] text-[#2B2B2B]">
@@ -55,9 +61,8 @@ const NavBar = () => {
         </button>
       </nav>
 
-      <nav className="hidden sm:fixed sm:z-30 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto">
-        <button className="hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] lg:flex lg:justify-center lg:items-center">
-
+      <nav className={ `hidden sm:fixed sm:z-30 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto ${ ( menuState ) ? "lg:justify-end" : "" }` }>
+        <button className={ `hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] lg:flex lg:justify-center lg:items-center ${( menuState ) ? "lg:hidden" : "" }` }>
           <div className="lg:w-6 lg:h-6">
             <Image 
               src={ Arrow }
@@ -71,10 +76,9 @@ const NavBar = () => {
           <div className="lg:text-xl lg:leading-6 lg:tracking-normal lg:text-[#363636] lg:ml-2.5">
             Back
           </div>
-
         </button>
         
-        <div className="sm:py-2">
+        <div className={ `sm:py-2 ${( menuState ) ? "lg:hidden" : "" }` }>
           <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
         </div>
 
@@ -107,12 +111,14 @@ const NavBar = () => {
 
       <div className={ `fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white ${ ( !menuState ) && "hidden" }` }>
         <div className="relative top-[15.03%] h-[84.97%] sm:top-[26.25vh] sm:h-[73.75vh]">
-          <div className="w-[91.86%] h-full sm:w-[85.61%] mx-auto">
+          <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
             <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
-              { links.map( (link) => (
-              <Heading key={ link.id } className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] sm:text-[64px] sm:leading-[120%]">
-                { link.name }
-              </Heading>  
+              { links.map( ( link ) => (
+              <Link key={ link.id } href={ link.href } className="w-fit">
+                <Heading as="span" className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] sm:text-[64px] sm:leading-[120%]">
+                  { link.name }
+                </Heading>
+              </Link>  
               ) ) }
             </section>
 
@@ -122,9 +128,9 @@ const NavBar = () => {
 
             <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
               { emails.map( ( email ) => (
-              <div key={ email.id } className="text-xl leading-6 tracking-normal text-[#2A2A2A]">
+              <Link key={ email.id } href={ `mailto:${email.address}` } className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] hover:cursor-pointer">
                 { email.address }
-              </div>  
+              </Link>  
               ) ) }
             </section>
 
@@ -147,17 +153,17 @@ const NavBar = () => {
                 </section>
               </section>
 
-              <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center sm:pt-[8.02vh]">
-                <div>
+              <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center lg:block sm:pt-[8.02vh]">
+                <div className="lg:w-[72.86%] lg:mx-auto">
                   <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] sm:leading-[120%]">
                     Mail Us
                   </div>
 
                   <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
                     { emails.map( ( email ) => (
-                    <div key={ email.id } className="text-xl leading-6 tracking-normal text-[#2A2A2A]">
+                    <Link key={ email.id } href={ `mailto:${email.address}` } className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A]">
                       { email.address }
-                    </div>  
+                    </Link>  
                     ) ) }
                   </section>
                 </div>
