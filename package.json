@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "static": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.6",
