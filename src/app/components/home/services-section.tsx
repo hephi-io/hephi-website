@@ -13,14 +13,26 @@ import PictureSix from "@/app/assets/jpegs/glasses-girl.jpg";
 
 const ServicesSection = () => {
   const serviceCards = [
-    { picturePath: PictureThree, heading: "Product Design", isHover: true },
+    {
+      picturePath: PictureThree,
+      heading: "Product Design",
+      copy: "Turning ideas into innovative, user-centered digital products.",
+    },
     {
       picturePath: PictureFour,
       heading: "Brand Identity Design",
-      isHover: false,
+      copy: "Crafting bold, unforgettable brands that speak your story.",
     },
-    { picturePath: PictureFive, heading: "Web Development", isHover: false },
-    { picturePath: PictureSix, heading: "Talent Outsourcing", isHover: false },
+    {
+      picturePath: PictureFive,
+      heading: "Web Development",
+      copy: "Building sleek, high-performance websites that move fast and scale smart.",
+    },
+    {
+      picturePath: PictureSix,
+      heading: "Talent Outsourcing",
+      copy: "Connecting you with top-tier talent to power your next big move.",
+    },
   ];
 
   return (
@@ -41,43 +53,31 @@ const ServicesSection = () => {
             and Precision
           </Heading>
         </div>
-        <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-4">
+        <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-4 transition-all duration-700 ease-in">
           {serviceCards.map((serviceCard, index) => (
             <div
               key={index}
-              className="rounded-3xl bg-[#F3F3F3] dark:bg-[#1B1B1C] pt-4 pb-6 sm:rounded-[32px] sm:pt-6 sm:pb-12 lg:p-0 lg:bg-white"
+              className="group rounded-3xl bg-[#F3F3F3] hover:bg-[#4795FF] dark:bg-[#1B1B1C] dark:border dark:border-[#313131] sm:rounded-[32px] lg:bg-white lg:hover:bg-white dark:lg:border-none dark:lg:hover:bg-[#1B1B1C] pt-4 pb-6 sm:pt-6 sm:pb-12 lg:p-0"
             >
               <div className="w-[90%] mx-auto sm:w-[93.89%] lg:w-full">
-                <div
-                  className={`relative h-[294px] rounded-xl border border-[#EBEBED] dark:border-[#313131] sm:h-[593px] sm:rounded-3xl ${
-                    serviceCard.isHover ? "lg:h-[577px]" : "lg:h-[641px]"
-                  } mb-9 lg:mb-6`}
-                >
+                <div className="relative h-[294px] rounded-xl border border-[#EBEBED] dark:border-[#313131] sm:h-[593px] sm:rounded-3xl lg:h-[641px] lg:group-hover:h-[577px] mb-9 lg:mb-6">
                   <Image
                     src={serviceCard.picturePath}
                     alt=""
                     className="w-full h-full rounded-xl object-cover sm:rounded-3xl"
                   />
-                  <div
-                    className={`absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313] sm:top-6 sm:right-6 ${
-                      !serviceCard.isHover && "lg:hidden"
-                    }`}
-                  >
+                  <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313] sm:top-6 sm:right-6 lg:opacity-0 lg:group-hover:opacity-100">
                     <Image src={Arrow} width={25.2} height={25.2} alt="" />
                   </div>
                 </div>
                 <Heading
                   as="div"
-                  className="text-2xl leading-6 text-[#363636] dark:text-white lg:text-[32px] lg:leading-[32px] mb-2 sm:mb-4"
+                  className="text-2xl leading-6 text-[#363636] group-hover:text-white lg:group-hover:text-[#363636] dark:lg:group-hover:text-white dark:text-white dark:lg lg:text-[32px] lg:leading-[32px]"
                 >
                   {serviceCard.heading}
                 </Heading>
-                <div
-                  className={`text-base leading-[19.2px] text-[#6F6F6F] dark:text-[#D1D1D2] ${
-                    !serviceCard.isHover && "lg:hidden"
-                  } lg:text-xl lg:leading-6`}
-                >
-                  Turning ideas into innovative, user-centered digital products.
+                <div className="text-base leading-[19.2px] text-[#6F6F6F] group-hover:text-[#D1D1D2] lg:group-hover:text-[#6F6F6F] dark:lg:group-hover:text-[#D1D1D2] dark:text-[#D1D1D2] lg:text-xl lg:leading-6 lg:hidden lg:group-hover:block mt-2 sm:mt-4">
+                  {serviceCard.copy}
                 </div>
               </div>
             </div>

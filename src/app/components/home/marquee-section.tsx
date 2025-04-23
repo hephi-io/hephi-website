@@ -17,31 +17,38 @@ import Star from "@/app/assets/pngs/star (1).png";
 import Jotter from "@/app/assets/pngs/jotter.png";
 import Brain from "@/app/assets/pngs/braain.png";
 import Plus from "@/app/assets/pngs/plus.png";
+import Energy from "@/app/assets/pngs/energy.png";
+import Dedicated from "@/app/assets/pngs/dedicated.png";
+import Fire from "@/app/assets/pngs/Fire.png";
+import ThumbsUp from "@/app/assets/pngs/thumbs-up.png";
+import Collabo from "@/app/assets/pngs/brrandd.png";
+import Coin from "@/app/assets/pngs/coin.png";
+import Transparency from "@/app/assets/pngs/transparency.png";
 
 const MarqueeSection = () => {
   const marqueeItems = [
-    { text: "Energetic", picturePath: "", pictureWidth: "" },
-    { text: "Client-First", picturePath: "", pictureWidth: "" },
+    { text: "Energetic", picturePath: Energy, pictureWidth: "48.4" },
+    { text: "Client-First", picturePath: ThumbsUp, pictureWidth: "48.4" },
     { text: "Creative", picturePath: LightBulb, pictureWidth: "" },
     { text: "Innovative", picturePath: LaptopIcon, pictureWidth: "" },
     { text: "Reliable", picturePath: Star, pictureWidth: "48.4" },
     { text: "Dynamic", picturePath: BubbleCube, pictureWidth: "60.5" },
     { text: "Passionate", picturePath: Rocket, pictureWidth: "" },
     { text: "Agile", picturePath: Jotter, pictureWidth: "48.4" },
-    { text: "Empathetic", picturePath: "", pictureWidth: "" },
-    { text: "Growth partner", picturePath: Handshake, pictureWidth: "" },
+    { text: "Empathetic", picturePath: Fire, pictureWidth: "48.4" },
+    { text: "Growth partner", picturePath: Coin, pictureWidth: "48.4" },
   ];
 
   const secondMarqueeItems = [
     { text: "Customer-centric", picturePath: Handshake, pictureWidth: "" },
-    { text: "Dedicated", picturePath: Tools, pictureWidth: "" },
+    { text: "Dedicated", picturePath: Dedicated, pictureWidth: "48.4" },
     { text: "Visionary", picturePath: Binoculars, pictureWidth: "" },
     { text: "Strategic", picturePath: Brain, pictureWidth: "48.4" },
     { text: "Resourceful", picturePath: Plus, pictureWidth: "48.4" },
     { text: "Expert", picturePath: Tools, pictureWidth: "" },
-    { text: "Transparent", picturePath: Handshake, pictureWidth: "" },
+    { text: "Transparent", picturePath: Transparency, pictureWidth: "60.5" },
     { text: "Transformative", picturePath: ToggleIcon, pictureWidth: "" },
-    { text: "Collaborative", picturePath: "", pictureWidth: "" },
+    { text: "Collaborative", picturePath: Collabo, pictureWidth: "60.5" },
   ];
 
   return (

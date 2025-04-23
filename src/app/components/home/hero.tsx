@@ -20,7 +20,7 @@ const Hero = () => {
               <div className="text-base leading-[19.2px] text-[#6F6F6F] dark:text-[#D1D1D2] lg:text-2xl lg:leading-[28.8px] mb-8">
                 We build standout digital solutions that are both innovative and future-ready. Whether you&apos;re scaling up or already leading the industry, we&apos;re your partners in turning vision into impact.
               </div>
-              <button className="rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center">
+              <button className="rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center hover:cursor-pointer">
                 <div className="font-bold text-base leading-[20.8px] text-white lg:text-xl lg:leading-[26px]">
                   Get in touch
                 </div>
