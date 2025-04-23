@@ -1,75 +1,59 @@
 "use client";
-import Image from "next/image";
+
 import React from "react";
-import CardIG from "@/app/assets/jpegs/a59edf0245df657c9d12deea3c5cd450.jpeg";
-import Logo from "@/app/assets/svgs/hephi-logo.svg";
-import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
-import DarkIcon from "@/app/assets/svgs/dark-icon.svg";
-import LightIcon from "@/app/assets/svgs/light-icon.svg";
-import Arrow from "@/app/assets/svgs/arrow.svg";
+
+import Image from "next/image";
+import { Francois_One } from "next/font/google";
+
+import Heading from "@/app/components/shared/heading";
 import FAQSection from "@/app/components/home/faq-section";
 import Footer from "@/app/components/home/footer";
-import NavBar from "@/app/components/home/nav-bar";
-import { Francois_One } from "next/font/google";
+import NavBar from "@/app/components/contact/nav-bar";
+import ModeToggle from "@/app/components/home/mode-toggle";
+import { HephiLogo } from "@/app/components/home/nav-bar";
+
+import Arrow from "@/app/assets/svgs/arrow.svg";
+import CardIG from "@/app/assets/jpegs/a59edf0245df657c9d12deea3c5cd450.jpeg";
 
 const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] });
 
 function Contact() {
   return (
-    <div>
-      <div>
-        <div className="lg:hidden">{/* <NavBar /> */}</div>
-
-        <div className="fixed right-4 bottom-4 w-[91px] h-14 rounded-full border border-white flex justify-center items-center dark-mode-toggle-button z-30 md:hidden">
-          <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] border-[2.5px] border-[#EBEBEB] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px]">
-            <Image
-              src={DarkIcon}
-              width={50}
-              height={50}
-              alt="Dark Icon"
-              className="z-20 rounded-full"
-            />
-
-            <Image
-              src={LightIcon}
-              width={50}
-              height={50}
-              alt="Dark Icon"
-              className="z-20 rounded-full"
-            />
-
-            <div className="absolute right-[2.5px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB]"></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#F3F3F3] lg:bg-white rounded-2xl">
-        <div className="w-[90%] flex flex-col justify-center items-start sm:w-[94.24%] lg:max-w-[1391px] lg:flex-row lg:gap-[16px]  mb-5 pb-5 lg:my-4 lg:py-4 mx-auto">
-          <div className="bg-[#F3F3F3] lg:max-w-[40%] lg:h-full lg:p-[36px] lg:rounded-3xl">
-            <h1
-              className={`${francoisOne.className} hidden lg:block font-normal text-2xl leading-[24px] tracking-normal text-[#2B2B2B] mb-12`}
-            >
-              Contact
-            </h1>
-
-            <div className="flex flex-col-reverse lg:flex-col w-full px-2 lg:px-0 lg:h-[798px] lg:rounded-2xl ">
-              {" "}
-              {/* Removed redundant border-red-800 */}
-              <div className="lg:max-w-[500px] lg:h-[494px] lg:gap-[23.65px] rounded-[24px] lg:border-[1.48px] overflow-hidden flex items-center justify-center my-4 lg:my-0 ">
-                <Image
-                  className="w-full h-full object-cover"
-                  src={CardIG}
-                  alt="Card Image"
-                  priority
-                />
-              </div>
-
-              <div className="py-5 lg:pt-12 md:min-w-[71.4%] max-w-full lg:w-full lg:mx-0">
-                <h2 className="text-3xl lg:text-4xl font-semibold mb-4 leading-[3rem]">
+    <div className="bg-white dark dark:bg-[#131314] sm:py-4">
+      <NavBar />
+      <ModeToggle />
+      <div className="bg-[#F3F3F3] dark:bg-[#131314] border border-[#EBEBED] dark:border-[#313131] sm:w-[94.24%] sm:rounded-[42px] lg:max-w-[1391px] lg:h-[966px] lg:bg-white lg:border-none lg:rounded-none py-4 mb-24 sm:py-9 sm:mb-[120px] lg:p-0 mx-auto">
+        <div className="w-[91.86%] sm:w-[90.84%] lg:w-full lg:h-full lg:flex lg:justify-between lg:items-start mx-auto lg:mx-0">
+          <div className="lg:w-[41.12%] lg:h-full lg:rounded-[42px] lg:bg-[#F3F3F3] dark:lg:bg-[#1B1B1C] lg:border lg:border-[#EBEBED] dark:lg:border-[#313131] lg:py-9">
+            <div className="lg:w-[87.41%] lg:h-full lg:flex lg:flex-col lg:justify-between lg:mx-auto">
+              <Heading className="hidden lg:block lg:text-xl lg:leading-[120%] lg:tracking-normal lg:text-[#2B2B2B] dark:lg:text-white">
+                CONTACT
+              </Heading>
+              <div className="mb-6 sm:mb-16 lg:hidden">
+                <div className="h-[54px] mb-20 sm:h-14 sm:mb-[120px]"></div>
+                <Heading className="text-3xl lg:text-4xl font-semibold leading-[3rem] text-[#363636] dark:text-white tracking-normal sm:text-[36px] sm:leading-[100%] mb-6">
                   We’re Here to Bring Your Vision to Life
-                </h2>
-
-                <p className="text-gray-600 text-base md:text-lg  lg:w-[90%]">
+                </Heading>
+                <p className="text-base text-[#6F6F6F] dark:text-[#D1D1D2] sm:text-xl leading-[120%] tracking-normal sm:w-[64.85%]">
+                  Have a project in mind or just want to say hello? We’re eager
+                  to hear from you. Whether you need a new digital product, a
+                  brand refresh, or expert talent, Hephi is ready to collaborate
+                  and create something extraordinary together.
+                </p>
+              </div>
+              <div>
+                <div className="h-[488px] rounded-4xl overflow-hidden sm:h-[494px] sm:rounded-3xl mb-10 sm:mb-16">
+                  <Image
+                    className="w-full h-full object-cover"
+                    src={CardIG}
+                    alt="Card Image"
+                    priority
+                  />
+                </div>
+                <Heading className="hidden lg:block lg:text-5xl lg:leading-[100%] lg:tracking-normal lg:text-[#363636] dark:lg:text-white lg:mb-6">
+                  We’re Here to Bring Your Vision to Life
+                </Heading>
+                <p className="hidden lg:block lg:text-xl lg:text-[#6F6F6F] dark:lg:text-[#D1D1D2] lg:leading-[120%] lg:tracking-normal">
                   Have a project in mind or just want to say hello? We’re eager
                   to hear from you. Whether you need a new digital product, a
                   brand refresh, or expert talent, Hephi is ready to collaborate
@@ -78,105 +62,84 @@ function Contact() {
               </div>
             </div>
           </div>
-
-          <div className="sm:h-full lg:max-w-[60%] rounded-3xl bg-[#F3F3F3] lg:p-[36px] outline">
-            <div className="w-full px-2 lg:px-0">
-              <div className="bg-white rounded-2xl py-6 px-4 lg:w-[100%] lg:py-[24px] lg:px-[16px] lg:gap-[52px]">
-                {" "}
-                {/* Removed redundant border-0 border-red-800 */}
-                <div className="lg:min-w-full lg:justify-between lg:gap-[36px]">
-                  <div className="lg:min-w-full lg:h-[118px] lg:gap-[24px]  lg:mb-1.5">
-                    <h2
-                      className={`${francoisOne.className} text-[#363636]  font-normal text-2xl leading-[41.6px]`}
-                    >
-                      We&apos;re Here to Help
-                    </h2>
-
-                    <p className="font-nouvelle font-normal text-base leading-[26px]">
-                      For urgent inquiries or immediate support, click below to
-                      get in touch with our team. We&apos;re ready to assist you with
-                      any digital needs.
-                    </p>
-                  </div>
-                </div>
-
-                <form className="lg:min-w-full lg:gap-[16px] mt-4 lg:mt-0">
-                  <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-[10px] mb-4 gap-4">
-                    {" "}
-                    {/* Added gap-y-4 for smaller screens */}
-                    <input
-                      type="text"
-                      name="firstName"
-                      className="w-full border-gray-300 rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] placeholder:font-semibold focus:outline-none"
-                      placeholder="First name"
-                      required
-                    />{" "}
-                    {/* Added padding for smaller screens */}
-
-                    <input
-                      type="text"
-                      name="lastName"
-                      className="w-full border-gray-300 rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] placeholder:font-semibold focus:outline-none"
-                      placeholder="Last name"
-                      required
-                    />{" "}
-                    {/* Added padding for smaller screens */}
-                  </div>
-
-                  <input
-                    type="email"
-                    name="email"
-                    className="w-full border-gray-300 rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] placeholder:font-semibold mb-4 focus:outline-none"
-                    required
-                    placeholder="Email Address"
-                  />{" "}
-                  {/* Added padding for smaller screens */}
-
-                  <select
-                    name="service"
-                    className="w-full border-gray-300 rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] placeholder:font-semibold mb-4"
+          <div className="lg:w-[57.73%] lg:h-full lg:rounded-[42px] lg:border lg:border-[#EBEBED] dark:lg:border-[#313131] lg:bg-[#F3F3F3] dark:lg:bg-[#1B1B1C] lg:py-9">
+            <div className="lg:w-[91.03%] lg:h-full lg:flex lg:items-end lg:mx-auto">
+              <div className="rounded-3xl bg-white dark:bg-[#242425] py-4 sm:py-9 lg:py-6">
+                <div className="w-[91.14%] sm:w-[89.92%] lg:w-[95.62%] mx-auto">
+                  <h2
+                    className={`${francoisOne.className} text-[#363636] dark:text-white text-2xl leading-[41.6px] tracking-normal sm:text-[32px] sm:leading-[130%] mb-4 sm:mb-6`}
                   >
-                    {" "}
-                    {/* Added padding for smaller screens */}
-                    <option value="">-- Select --</option>
-                    <option value="web-design">Web Design</option>
-                    <option value="development">Development</option>
-                    <option value="marketing">Marketing</option>
-                  </select>
-
-                  <textarea
-                    name="message"
-                    rows={4}
-                    className="w-full lg:mb-4 border-gray-300 rounded-xl lg:p-[24px] p-[16px] bg-[#f3f3f3] placeholder:font-semibold focus:outline-none resize-none lg:max-h-[112px]"
-                    placeholder="Type your message"
-                    required
-                  />{" "}
-                  {/* Added padding for smaller screens */}
-
-                  <button
-                    type="submit"
-                    className="w-full flex justify-between items-center bg-[#4795FF] rounded-xl text-white font-bold lg:p-[24px] p-[16px]"
-                  >
-                    {" "}
-                    {/* Added padding for smaller screens */}
-                    Contact Our Team
-                    <Image
-                      src={Arrow}
-                      alt="Menu Icon"
-                      className="w-6 h-6 text-white"
+                    We&apos;re Here to Help
+                  </h2>
+                  <p className="text-base text-[#6F6F6F] dark:text-[#D1D1D2] leading-[26px] tracking-normal sm:text-xl sm:leading-[130%] mb-9">
+                    For urgent inquiries or immediate support, click below to
+                    get in touch with our team. We&apos;re ready to assist you
+                    with any digital needs.
+                  </p>
+                  <form>
+                    <div className="sm:flex sm:justify-between sm:items-center sm:mb-4">
+                      <input
+                        type="text"
+                        name="firstName"
+                        className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4 sm:w-[48.75%] sm:mb-0"
+                        placeholder="First name"
+                        required
+                      />
+                      <input
+                        type="text"
+                        name="lastName"
+                        className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4 sm:w-[48.75%] sm:mb-0"
+                        placeholder="Last name"
+                        required
+                      />
+                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4"
+                      required
+                      placeholder="Email Address"
                     />
-                  </button>
-                </form>
+                    <select
+                      name="service"
+                      className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:text-[#C9C9CA] mb-4"
+                    >
+                      <option value="" className="dark:text-[#C9C9CA]">
+                        -- Select --
+                      </option>
+                      <option value="web-design">Web Design</option>
+                      <option value="development">Development</option>
+                      <option value="marketing">Marketing</option>
+                    </select>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      className="w-full lg:mb-4 border border-gray-300 dark:border-[#6C6C6C] rounded-xl lg:p-[24px] p-[16px] bg-[#f3f3f3] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none resize-none lg:max-h-[112px] mb-4"
+                      placeholder="Type your message"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="w-full flex justify-between items-center bg-[#4795FF] rounded-xl text-white font-bold lg:p-[24px] p-[16px]"
+                    >
+                      Contact Our Team
+                      <Image
+                        src={Arrow}
+                        alt="Menu Icon"
+                        className="w-6 h-6 text-white"
+                      />
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="sm:py-4">
+      <div className="mb-24 sm:mb-[120px]">
         <FAQSection />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

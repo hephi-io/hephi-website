@@ -1,108 +1,171 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-import MenuButton from "@/app/components/home/menu-button"
-import Heading from "@/app/components/shared/heading"
+import MenuButton from "@/app/components/home/menu-button";
+import Heading from "@/app/components/shared/heading";
 
-import Arrow from "@/app/assets/svgs/arrow-forward-black.svg"
-import Logo from "@/app/assets/svgs/hephi-logo.svg"
-import MenuIcon from "@/app/assets/svgs/menu-icon.svg"
-import DarkIcon from "@/app/assets/svgs/dark-icon.svg"
-import LightIcon from "@/app/assets/svgs/light-icon.svg"
-import Twitter from "@/app/assets/svgs/twitter.svg"
-import Whatsapp from "@/app/assets/svgs/whatsapp.svg"
-import Linkedin from "@/app/assets/svgs/linkedin.svg"
-import Instagram from "@/app/assets/svgs/instagram.svg"
-import CancelIcon from "@/app/assets/svgs/cancel-icon.svg"
+import Arrow from "@/app/assets/svgs/arrow-forward-black.svg";
+import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
+import DarkIcon from "@/app/assets/svgs/dark-icon.svg";
+import LightIcon from "@/app/assets/svgs/light-icon.svg";
+import Twitter from "@/app/assets/svgs/twitter.svg";
+import Whatsapp from "@/app/assets/svgs/whatsapp.svg";
+import Linkedin from "@/app/assets/svgs/linkedin.svg";
+import Instagram from "@/app/assets/svgs/instagram.svg";
+import CancelIcon from "@/app/assets/svgs/cancel-icon.svg";
+import { HephiLogo } from "../home/nav-bar";
 
 const NavBar = () => {
-  const links = [ 
-    { id: 1, name: "HOME", href: "/" }, 
-    { id: 2, name: "WORK", href: "/portfolio" }, 
-    { id: 3, name: "ABOUT", href: "#about" }, 
-    { id: 4, name: "CONTACT US", href: "/contact" } 
-  ]
-  
-  const emails = [ { id: 1, address: "info@hephi.io" }, { id: 2, address: "careers@hephi.io" } ]
+  const links = [
+    { id: 1, name: "HOME", href: "/" },
+    { id: 2, name: "WORK", href: "/portfolio" },
+    { id: 3, name: "ABOUT", href: "#about" },
+    { id: 4, name: "CONTACT US", href: "/contact" },
+  ]; 
 
-  const socials = [ 
-    { id: 1, src: Twitter, mobileWidth: 19.18, mobileHeight: 15.58, tabWidth: 32, tabHeight: 32 }, 
-    { id: 1, src: Whatsapp, mobileWidth: 18.24, mobileHeight: 18.33, tabWidth: 26.53, tabHeight: 26.67 }, 
-    { id: 1, src: Linkedin, mobileWidth: 14.14, mobileHeight: 14.14, tabWidth: 24, tabHeight: 24 }, 
-    { id: 1, src: Instagram, mobileWidth: 18.17, mobileHeight: 19, tabWidth: 32, tabHeight: 32 }, 
-  ]
+  const emails = [
+    { id: 1, address: "info@hephi.io" },
+    { id: 2, address: "careers@hephi.io" },
+  ];
 
-  const buttons = [ { id: 1, text: "Decline", imgSrc: undefined }, { id: 2, text: "Accept", imgSrc: Arrow } ]
-  
-  const [ menuState, setMenuState ] = useState( false )
+  const socials = [
+    {
+      id: 1,
+      src: Twitter,
+      mobileWidth: 19.18,
+      mobileHeight: 15.58,
+      tabWidth: 32,
+      tabHeight: 32,
+    },
+    {
+      id: 1,
+      src: Whatsapp,
+      mobileWidth: 18.24,
+      mobileHeight: 18.33,
+      tabWidth: 26.53,
+      tabHeight: 26.67,
+    },
+    {
+      id: 1,
+      src: Linkedin,
+      mobileWidth: 14.14,
+      mobileHeight: 14.14,
+      tabWidth: 24,
+      tabHeight: 24,
+    },
+    {
+      id: 1,
+      src: Instagram,
+      mobileWidth: 18.17,
+      mobileHeight: 19,
+      tabWidth: 32,
+      tabHeight: 32,
+    },
+  ];
 
-  const handleMenu = ( data: boolean ) => {
-    setMenuState( data )
-  }
+  const buttons = [
+    { id: 1, text: "Decline", imgSrc: undefined },
+    { id: 2, text: "Accept", imgSrc: Arrow },
+  ];
+
+  const [menuState, setMenuState] = useState(false);
+
+  const handleMenu = (data: boolean) => {
+    setMenuState(data);
+  };
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <nav className="fixed z-30 top-4 left-4 right-4 nav h-[54px] flex justify-between items-center sm:hidden p-2 pl-4 mx-auto">
+      <nav className="fixed z-30 top-4 left-4 right-4 nav h-[54px] flex justify-between items-center bg-[#B1ADAD33] dark:bg-[#00000066] border border-white dark:border-[#3F3F3F] sm:hidden p-2 pl-4 mx-auto">
         <div className="py-2">
-          <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
+          <HephiLogo />
         </div>
-
-        <button className="rounded p-2 bg-white flex gap-x-2 hover:cursor-pointer" onClick={ () => { setMenuState( !menuState ) } }>
-          <Image src={ ( !menuState ) ? MenuIcon : CancelIcon } width={ 20.56 } height={ 20.56 } alt="Menu Icon" />
+        <button
+          className="rounded p-2 bg-white flex gap-x-2 hover:cursor-pointer"
+          onClick={() => {
+            setMenuState(!menuState);
+          }}
+        >
+          <Image
+            src={!menuState ? MenuIcon : CancelIcon}
+            width={20.56}
+            height={20.56}
+            alt="Menu Icon"
+          />
 
           <Heading as="div" className="text-lg leading-[21.6px] text-[#2B2B2B]">
-            { ( !menuState ) ? "Menu" : "Close" }
+            {!menuState ? "Menu" : "Close"}
           </Heading>
         </button>
       </nav>
-
-      <nav className="hidden sm:fixed sm:z-30 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] lg:mx-auto"> 
-        <div className="sm:py-2">
-          <Image src={ Logo } width={ 100.88 } height={ 19 } alt="Hephi Logo" />
-        </div>
-
-        <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
-          <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
-            <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] border-[2.5px] border-[#EBEBEB] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px]">
-              <Image
-                src={DarkIcon}
-                width={30}
-                height={30}
-                alt="Dark Icon"
-                className="z-20 rounded-full"
-              />
-
-              <Image
-                src={LightIcon}
-                width={30}
-                height={30}
-                alt="Dark Icon"
-                className="z-20 rounded-full"
-              />
-
-              <div className="absolute right-[2.5px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB]"></div>
-            </div>
+      <nav className="hidden sm:fixed sm:z-30 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:block lg:max-w-[1319px] sm:mx-auto">
+        <div
+          className={`sm:w-full sm:h-full sm:flex sm:justify-between sm:items-center sm:transition-all sm:duration-1000 sm:ease-in-out ${
+            !scrolled ? "lg:max-w-[711px] lg:ml-auto" : "scale-x-100"
+          }`}
+        >
+          <div className="sm:py-2">
+            <HephiLogo />
           </div>
+          <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
+            <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
+              <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px]">
+                <Image
+                  src={DarkIcon}
+                  width={30}
+                  height={30}
+                  alt="Dark Icon"
+                  className="z-20 rounded-full"
+                />
 
-          <MenuButton menuState={ menuState } handleMenu={ handleMenu } />
+                <Image
+                  src={LightIcon}
+                  width={30}
+                  height={30}
+                  alt="Dark Icon"
+                  className="z-20 rounded-full"
+                />
+
+                <div className="absolute right-[2.5px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB]"></div>
+              </div>
+            </div>
+            <MenuButton menuState={menuState} handleMenu={handleMenu} />
+          </div>
         </div>
       </nav>
-
-      <div className={ `fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white ${ ( !menuState ) && "hidden" }` }>
+      <div
+        className={`fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white dark:bg-[#1B1B1C] ${
+          !menuState && "hidden"
+        }`}
+      >
         <div className="relative top-[15.03%] h-[84.97%] sm:top-[26.25vh] sm:h-[73.75vh]">
           <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
             <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
-              { links.map( ( link ) => (
-              <Link key={ link.id } href={ link.href } className="w-fit">
-                <Heading as="span" className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] sm:text-[64px] sm:leading-[120%]">
-                  { link.name }
-                </Heading>
-              </Link>  
-              ) ) }
+              {links.map((link) => (
+                <Link key={link.id} href={link.href} className="w-fit">
+                  <Heading
+                    as="span"
+                    className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] sm:text-[64px] sm:leading-[120%]"
+                  >
+                    {link.name}
+                  </Heading>
+                </Link>
+              ))}
             </section>
 
             <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] mt-[7.41vh] sm:hidden">
@@ -110,29 +173,38 @@ const NavBar = () => {
             </div>
 
             <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
-              { emails.map( ( email ) => (
-              <Link key={ email.id } href={ `mailto:${email.address}` } className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] hover:cursor-pointer">
-                { email.address }
-              </Link>  
-              ) ) }
+              {emails.map((email) => (
+                <Link
+                  key={email.id}
+                  href={`mailto:${email.address}`}
+                  className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] hover:cursor-pointer"
+                >
+                  {email.address}
+                </Link>
+              ))}
             </section>
 
             <section className="h-[12.83vh] border-t border-t-[#C6C6C6] flex justify-start items-center sm:h-[24.85vh] sm:items-start mt-[4.01vh] sm:mt-[8.02vh]">
               <section className="sm:w-[50%] sm:pt-[8.02vh]">
                 <section className="flex gap-x-[15.56px] items-center">
-                  { socials.map( (icon) => (
-                  <button key={ icon.id } className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] flex justify-center items-center sm:w-14 sm:h-14">
-                    <div className={ `w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px]` }>
-                      <Image 
-                        src={ icon.src }
-                        alt=""
-                        width={ undefined }
-                        height={ undefined }
-                        className="w-full h-full"
-                      />
-                    </div>
-                  </button>  
-                  ) ) }
+                  {socials.map((icon) => (
+                    <button
+                      key={icon.id}
+                      className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] flex justify-center items-center sm:w-14 sm:h-14"
+                    >
+                      <div
+                        className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px]`}
+                      >
+                        <Image
+                          src={icon.src}
+                          alt=""
+                          width={undefined}
+                          height={undefined}
+                          className="w-full h-full"
+                        />
+                      </div>
+                    </button>
+                  ))}
                 </section>
               </section>
 
@@ -143,11 +215,15 @@ const NavBar = () => {
                   </div>
 
                   <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
-                    { emails.map( ( email ) => (
-                    <Link key={ email.id } href={ `mailto:${email.address}` } className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A]">
-                      { email.address }
-                    </Link>  
-                    ) ) }
+                    {emails.map((email) => (
+                      <Link
+                        key={email.id}
+                        href={`mailto:${email.address}`}
+                        className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A]"
+                      >
+                        {email.address}
+                      </Link>
+                    ))}
                   </section>
                 </div>
               </section>
@@ -155,7 +231,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
       <div className="fixed z-40 top-0 right-0 left-0 h-[100vh] bg-[#1515153D] hidden">
         <div className="relative w-full h-full">
           <div className="absolute w-[91.86%] right-0 bottom-8 left-0 rounded-3xl bg-[#151515] py-6 mx-auto">
@@ -169,32 +244,41 @@ const NavBar = () => {
               </div>
 
               <div className="flex justify-between items-center mt-14">
-                { buttons.map( ( button ) => (
-                <button key={ button.id } className={ `w-[47.44%] rounded-full ${ ( button.id === 1 ) ? "border border-[#A3A3A3]" : "bg-white" } py-3 flex justify-center items-center` }>
-                  <div className="flex gap-x-2.5 items-center">
-                    <div className={ `font-bold text-base leading-[130%] tracking-normal ${ ( button.id === 1 ) ? "text-white" : "text-[#151515]" }` }>
-                      { button.text }
-                    </div>
+                {buttons.map((button) => (
+                  <button
+                    key={button.id}
+                    className={`w-[47.44%] rounded-full ${
+                      button.id === 1 ? "border border-[#A3A3A3]" : "bg-white"
+                    } py-3 flex justify-center items-center`}
+                  >
+                    <div className="flex gap-x-2.5 items-center">
+                      <div
+                        className={`font-bold text-base leading-[130%] tracking-normal ${
+                          button.id === 1 ? "text-white" : "text-[#151515]"
+                        }`}
+                      >
+                        {button.text}
+                      </div>
 
-                    <div className={ `w-6 h-6 ${ ( !button.imgSrc ) && "hidden" }` }>
-                      <Image 
-                        src={ button.imgSrc }
-                        alt=""
-                        width={ undefined }
-                        height={ undefined }
-                        className={ `w-full h-full` }
-                      />
+                      <div className={`w-6 h-6 ${!button.imgSrc && "hidden"}`}>
+                        <Image
+                          src={button.imgSrc}
+                          alt=""
+                          width={undefined}
+                          height={undefined}
+                          className={`w-full h-full`}
+                        />
+                      </div>
                     </div>
-                  </div>
-                </button>
-                ) ) }
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

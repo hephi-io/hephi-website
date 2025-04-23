@@ -16,7 +16,7 @@ import Footer from "@/app/components/home/footer"
 
 const Portfolio = () => {
   return (
-    <main>
+    <main className="dark dark:bg-[#1B1B1C]">
       <NavBar />
       <ModeToggle />
       <CaseStudy />
@@ -26,16 +26,13 @@ const Portfolio = () => {
       <Process />
       <Solution />
       <Result />
-
       <section className="mb-12 sm:mb-[120px]">
         <RecentWork />
       </section>
-
       <section className="mb-12 sm:mb-[120px]">
         <FAQSection />
       </section>
-
-      <footer className="sm:mb-4">
+      <footer className="sm:pb-4">
         <Footer />
       </footer>
     </main>

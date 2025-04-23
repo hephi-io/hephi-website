@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -35,9 +37,7 @@ body {
 
 /* switch */
 .nav {
-  background: rgba(177, 173, 173, 0.2);
   background-blend-mode: normal, soft-light;
-  border: 1px solid #FFFFFF;
   box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
   backdrop-filter: blur(15px);
   /* Note: backdrop-filter has minimal browser support */
@@ -64,7 +64,6 @@ body {
 }
 
 .tab-nav-switch {
-  /* background: linear-gradient(0deg, rgba(177, 173, 173, 0.2), rgba(177, 173, 173, 0.2)), rgba(0, 0, 0, 0.4); */
   background-blend-mode: normal, soft-light;
   box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
   backdrop-filter: blur(15px);
@@ -81,4 +80,34 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+.dummy {
+/* switch */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 8px 8px 16px;
+gap: 16px;
+
+margin: 0 auto;
+width: 361px;
+height: 54px;
+
+background: linear-gradient(0deg, rgba(177, 173, 173, 0.2), rgba(177, 173, 173, 0.2)), rgba(0, 0, 0, 0.4);
+background-blend-mode: normal, soft-light;
+border: 1px solid #3F3F3F;
+box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
+backdrop-filter: blur(15px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
 }
