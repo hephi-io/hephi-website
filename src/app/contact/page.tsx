@@ -19,7 +19,7 @@ const francoisOne = Francois_One({ weight: "400", subsets: ["latin"] });
 
 function Contact() {
   return (
-    <div className="bg-white dark dark:bg-[#131314] sm:py-4">
+    <div className="bg-white dark:bg-[#131314] sm:py-4">
       <NavBar />
       <ModeToggle />
       <div className="bg-[#F3F3F3] dark:bg-[#131314] border border-[#EBEBED] dark:border-[#313131] sm:w-[94.24%] sm:rounded-[42px] lg:max-w-[1391px] lg:h-[966px] lg:bg-white lg:border-none lg:rounded-none py-4 mb-24 sm:py-9 sm:mb-[120px] lg:p-0 mx-auto">
