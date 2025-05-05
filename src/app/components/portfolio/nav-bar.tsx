@@ -14,11 +14,10 @@ import {
   LinkedinIcon,
   InstagramIcon,
 } from "@/app/components/home/nav-bar";
+import { DarkMode, LightMode } from "@/app/components/home/mode-toggle";
 
 import Arrow from "@/app/assets/svgs/arrow-forward-black.svg";
 import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
-import DarkIcon from "@/app/assets/svgs/dark-icon.svg";
-import LightIcon from "@/app/assets/svgs/light-icon.svg";
 import CancelIcon from "@/app/assets/svgs/cancel-icon.svg";
 
 const ArrowIcon = () => {
@@ -65,7 +64,7 @@ const NavBar = () => {
       tabHeight: 32,
     },
     {
-      id: 1,
+      id: 2,
       src: <WhatsappIcon />,
       mobileWidth: 18.24,
       mobileHeight: 18.33,
@@ -73,7 +72,7 @@ const NavBar = () => {
       tabHeight: 26.67,
     },
     {
-      id: 1,
+      id: 3,
       src: <LinkedinIcon />,
       mobileWidth: 14.14,
       mobileHeight: 14.14,
@@ -81,7 +80,7 @@ const NavBar = () => {
       tabHeight: 24,
     },
     {
-      id: 1,
+      id: 4,
       src: <InstagramIcon />,
       mobileWidth: 18.17,
       mobileHeight: 19,
@@ -146,22 +145,17 @@ const NavBar = () => {
         </div>
         <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
           <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
-            <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px]">
-              <Image
-                src={DarkIcon}
-                width={30}
-                height={30}
-                alt="Dark Icon"
-                className="z-20 rounded-full"
-              />
-              <Image
-                src={LightIcon}
-                width={30}
-                height={30}
-                alt="Dark Icon"
-                className="z-20 rounded-full"
-              />
-              <div className="absolute right-[2.5px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB]"></div>
+            <div
+              className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px] hover:cursor-pointer"
+              onClick={() => document.body.classList.toggle("dark")}
+            >
+              <div className="z-20 w-[30px] h-[30px] rounded-full text-[#EBEBEB] dark:text-[#282828]">
+                <DarkMode />
+              </div>
+              <div className="z-20 w-[30px] h-[30px] rounded-full text-[#282828] dark:text-[#EBEBEB]">
+                <LightMode />
+              </div>
+              <div className="absolute right-[1.9px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB] dark:-translate-x-9"></div>
             </div>
           </div>
           <MenuButton menuState={menuState} handleMenu={handleMenu} />

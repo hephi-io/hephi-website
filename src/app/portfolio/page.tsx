@@ -16,7 +16,7 @@ import Footer from "@/app/components/home/footer"
 
 const Portfolio = () => {
   return (
-    <main className="dark dark:bg-[#1B1B1C]">
+    <main className="dark:bg-[#1B1B1C]">
       <NavBar />
       <ModeToggle />
       <CaseStudy />

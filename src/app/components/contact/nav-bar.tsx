@@ -7,15 +7,18 @@ import Link from "next/link";
 
 import MenuButton from "@/app/components/home/menu-button";
 import Heading from "@/app/components/shared/heading";
+import {
+  TwitterIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "@/app/components/home/nav-bar";
+import { DarkMode, LightMode } from "@/app/components/home/mode-toggle";
 
 import Arrow from "@/app/assets/svgs/arrow-forward-black.svg";
 import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
 import DarkIcon from "@/app/assets/svgs/dark-icon.svg";
 import LightIcon from "@/app/assets/svgs/light-icon.svg";
-import Twitter from "@/app/assets/svgs/twitter.svg";
-import Whatsapp from "@/app/assets/svgs/whatsapp.svg";
-import Linkedin from "@/app/assets/svgs/linkedin.svg";
-import Instagram from "@/app/assets/svgs/instagram.svg";
 import CancelIcon from "@/app/assets/svgs/cancel-icon.svg";
 import { HephiLogo } from "../home/nav-bar";
 
@@ -25,7 +28,7 @@ const NavBar = () => {
     { id: 2, name: "WORK", href: "/portfolio" },
     { id: 3, name: "ABOUT", href: "#about" },
     { id: 4, name: "CONTACT US", href: "/contact" },
-  ]; 
+  ];
 
   const emails = [
     { id: 1, address: "info@hephi.io" },
@@ -35,7 +38,7 @@ const NavBar = () => {
   const socials = [
     {
       id: 1,
-      src: Twitter,
+      src: <TwitterIcon />,
       mobileWidth: 19.18,
       mobileHeight: 15.58,
       tabWidth: 32,
@@ -43,7 +46,7 @@ const NavBar = () => {
     },
     {
       id: 1,
-      src: Whatsapp,
+      src: <WhatsappIcon />,
       mobileWidth: 18.24,
       mobileHeight: 18.33,
       tabWidth: 26.53,
@@ -51,7 +54,7 @@ const NavBar = () => {
     },
     {
       id: 1,
-      src: Linkedin,
+      src: <LinkedinIcon />,
       mobileWidth: 14.14,
       mobileHeight: 14.14,
       tabWidth: 24,
@@ -59,7 +62,7 @@ const NavBar = () => {
     },
     {
       id: 1,
-      src: Instagram,
+      src: <InstagramIcon />,
       mobileWidth: 18.17,
       mobileHeight: 19,
       tabWidth: 32,
@@ -124,24 +127,14 @@ const NavBar = () => {
           </div>
           <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
             <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
-              <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px]">
-                <Image
-                  src={DarkIcon}
-                  width={30}
-                  height={30}
-                  alt="Dark Icon"
-                  className="z-20 rounded-full"
-                />
-
-                <Image
-                  src={LightIcon}
-                  width={30}
-                  height={30}
-                  alt="Dark Icon"
-                  className="z-20 rounded-full"
-                />
-
-                <div className="absolute right-[2.5px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB]"></div>
+              <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px] hover:cursor-pointer" onClick={() => {document.body.classList.toggle("dark")}}>
+                <div className="z-20 w-[30px] h-[30px] rounded-full text-[#EBEBEB] dark:text-[#282828]">
+                  <DarkMode />
+                </div>
+                <div className="z-20 w-[30px] h-[30px] rounded-full text-[#282828] dark:text-[#EBEBEB]">
+                  <LightMode />
+                </div>
+                <div className="absolute right-[1.9px] z-10 w-[30px] h-[30px] rounded-full bg-[#EBEBEB] dark:-translate-x-9"></div>
               </div>
             </div>
             <MenuButton menuState={menuState} handleMenu={handleMenu} />
@@ -160,66 +153,55 @@ const NavBar = () => {
                 <Link key={link.id} href={link.href} className="w-fit">
                   <Heading
                     as="span"
-                    className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] sm:text-[64px] sm:leading-[120%]"
+                    className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"
                   >
                     {link.name}
                   </Heading>
                 </Link>
               ))}
             </section>
-
-            <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] mt-[7.41vh] sm:hidden">
+            <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white mt-[7.41vh] sm:hidden">
               Mail Us
             </div>
-
             <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
               {emails.map((email) => (
                 <Link
                   key={email.id}
                   href={`mailto:${email.address}`}
-                  className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] hover:cursor-pointer"
+                  className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2] hover:cursor-pointer"
                 >
                   {email.address}
                 </Link>
               ))}
             </section>
-
             <section className="h-[12.83vh] border-t border-t-[#C6C6C6] flex justify-start items-center sm:h-[24.85vh] sm:items-start mt-[4.01vh] sm:mt-[8.02vh]">
               <section className="sm:w-[50%] sm:pt-[8.02vh]">
                 <section className="flex gap-x-[15.56px] items-center">
                   {socials.map((icon) => (
                     <button
                       key={icon.id}
-                      className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] flex justify-center items-center sm:w-14 sm:h-14"
+                      className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] dark:border-[#D1D1D2] flex justify-center items-center sm:w-14 sm:h-14"
                     >
                       <div
-                        className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px]`}
+                        className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px] text-[#2A2A2A] dark:text-[#D1D1D2]`}
                       >
-                        <Image
-                          src={icon.src}
-                          alt=""
-                          width={undefined}
-                          height={undefined}
-                          className="w-full h-full"
-                        />
+                        {icon.src}
                       </div>
                     </button>
                   ))}
                 </section>
               </section>
-
               <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center lg:block sm:pt-[8.02vh]">
                 <div className="lg:w-[72.86%] lg:mx-auto">
-                  <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] sm:leading-[120%]">
+                  <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white sm:leading-[120%]">
                     Mail Us
                   </div>
-
                   <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
                     {emails.map((email) => (
                       <Link
                         key={email.id}
                         href={`mailto:${email.address}`}
-                        className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A]"
+                        className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2]"
                       >
                         {email.address}
                       </Link>

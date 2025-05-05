@@ -51,7 +51,7 @@ const footer = () => {
                 </div>
               </div>
 
-              <button className="h-12	rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center mt-14 sm:mt-0 lg:mt-14">
+              <button className="h-12	rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center hover:cursor-pointer mt-14 sm:mt-0 lg:mt-14">
                 <div className="font-bold text-lg leading-[23.4px] text-white lg:text-xl lg:leading-[26px]">
                   Get in touch
                 </div>
