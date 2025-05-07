@@ -70,7 +70,7 @@ const RecentWork = () => {
   ];
 
   return (
-    <div className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
+    <div id="works" className="w-[90%] mx-auto sm:w-[94.24%] lg:max-w-[1391px]">
       <SectionHeader
         header="RECENT WORK"
         subHeader="Where Your Challenges Become Our Creative Playground."

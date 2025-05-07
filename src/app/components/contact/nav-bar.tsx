@@ -25,8 +25,8 @@ import { HephiLogo } from "../home/nav-bar";
 const NavBar = () => {
   const links = [
     { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "/portfolio" },
-    { id: 3, name: "ABOUT", href: "#about" },
+    { id: 2, name: "WORK", href: "" },
+    { id: 3, name: "ABOUT", href: "" },
     { id: 4, name: "CONTACT US", href: "/contact" },
   ];
 
@@ -150,7 +150,12 @@ const NavBar = () => {
           <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
             <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
               {links.map((link) => (
-                <Link key={link.id} href={link.href} className="w-fit">
+                <Link 
+                  key={link.id} 
+                  href={link.href} 
+                  className="w-fit"
+                  onClick={() => setMenuState(false)}
+                >
                   <Heading
                     as="span"
                     className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"
