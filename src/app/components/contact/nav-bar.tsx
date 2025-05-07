@@ -25,8 +25,8 @@ import { HephiLogo } from "../home/nav-bar";
 const NavBar = () => {
   const links = [
     { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "" },
-    { id: 3, name: "ABOUT", href: "" },
+    { id: 2, name: "WORK", href: "/#works" },
+    { id: 3, name: "ABOUT", href: "/#about" },
     { id: 4, name: "CONTACT US", href: "/contact" },
   ];
 
