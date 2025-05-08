@@ -53,10 +53,19 @@ const MarqueeSection = () => {
 
   return (
     <section className="overflow-x-hidden mb-24 sm:mb-[120px]">
-      <Marquee marqueeItems={marqueeItems} />
-      <Marquee marqueeItems={secondMarqueeItems} />
-      <Marquee marqueeItems={marqueeItems} />
-      <Marquee marqueeItems={secondMarqueeItems} noMarginBottom={true} />
+      <Marquee marqueeItems={marqueeItems} duration="40s" />
+      <Marquee
+        marqueeItems={secondMarqueeItems}
+        duration="45s"
+        marqueeDirection="reverse"
+      />
+      <Marquee marqueeItems={marqueeItems} duration="50s" />
+      <Marquee
+        marqueeItems={secondMarqueeItems}
+        duration="55s"
+        marqueeDirection="reverse"
+        noMarginBottom={true}
+      />
     </section>
   );
 };
@@ -69,18 +78,25 @@ interface IMarquee {
 
 interface IMarqueeProps {
   marqueeItems: IMarquee[];
+  duration: string;
+  marqueeDirection?: string;
   noMarginBottom?: boolean;
 }
 
 const Marquee = (props: IMarqueeProps) => {
-  const { marqueeItems, noMarginBottom } = props;
+  const { marqueeItems, duration, marqueeDirection, noMarginBottom } = props;
 
   return (
     <div className="overflow-hidden flex justify-start">
       <div
-        className={`marquee h-[60.5px] flex gap-x-[21.19px] items-center ${
-          noMarginBottom ? "mb-0" : "mb-[13.7px]"
-        }`}
+        style={{ animationDuration: `${duration}` }}
+        className={`h-[60.5px] flex gap-x-[21.19px] items-center 
+          ${noMarginBottom ? "mb-0" : "mb-[13.7px]"} 
+          ${
+            marqueeDirection === "reverse"
+              ? "translate-x-[-85%] reverse-marquee"
+              : "marquee"
+          }`}
       >
         {[...marqueeItems, ...marqueeItems].map((marqueeItem, index) => (
           <div
