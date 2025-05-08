@@ -51,7 +51,7 @@ body {
 }
 
 .marquee {
-  animation: loop 40s linear infinite;
+  animation: loop linear infinite;
 }
 
 @keyframes loop {
@@ -60,6 +60,19 @@ body {
   }
   100% {
     transform: translateX(-60%);
+  }
+}
+
+.reverse-marquee {
+  animation: reverse-loop linear infinite;
+}
+
+@keyframes reverse-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(60%);
   }
 }
 
