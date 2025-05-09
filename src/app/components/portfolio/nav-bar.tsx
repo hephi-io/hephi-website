@@ -44,8 +44,8 @@ const ArrowIcon = () => {
 const NavBar = () => {
   const links = [
     { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "/portfolio" },
-    { id: 3, name: "ABOUT", href: "" },
+    { id: 2, name: "WORK", href: "/#works" },
+    { id: 3, name: "ABOUT", href: "/#about" },
     { id: 4, name: "CONTACT US", href: "/contact" },
   ];
 
@@ -128,22 +128,26 @@ const NavBar = () => {
           menuState ? "lg:justify-end" : ""
         }`}
       >
-        <button
-          className={`hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] dark:lg:border-[#D1D1D2] lg:flex lg:justify-center lg:items-center ${
-            menuState ? "lg:hidden" : ""
-          }`}
+        <Link
+          href={'/#works'}
         >
-          <div className="lg:w-6 lg:h-6 text-[#363636] dark:text-white">
-            <ArrowIcon />
-          </div>
-          <div className="lg:text-xl lg:leading-6 lg:tracking-normal lg:text-[#363636] dark:lg:text-[#D1D1D2] lg:ml-2.5">
-            Back
-          </div>
-        </button>
+          <button
+            className={`hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] dark:lg:border-[#D1D1D2] lg:flex lg:justify-center lg:items-center hover:cursor-pointer ${
+              menuState ? "lg:hidden" : ""
+            }`}
+          >
+            <div className="lg:w-6 lg:h-6 text-[#363636] dark:text-white">
+              <ArrowIcon />
+            </div>
+            <div className="lg:text-xl lg:leading-6 lg:tracking-normal lg:text-[#363636] dark:lg:text-[#D1D1D2] lg:ml-2.5">
+              Back
+            </div>
+          </button>
+        </Link>
         <div className={`sm:py-2 ${menuState ? "lg:hidden" : ""}`}>
           <HephiLogo />
         </div>
-        <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
+        <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center tab-nav-switch sm:bg-[#B1ADAD33]">
           <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
             <div
               className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px] hover:cursor-pointer"

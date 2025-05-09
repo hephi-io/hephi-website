@@ -8,7 +8,7 @@ import MarqueeSection from "@/app/components/home/marquee-section"
 import ServicesSection from "@/app/components/home/services-section"
 import RecentWork from "@/app/components/home/recent-work"
 import ProcessSection from "@/app/components/home/process-section"
-import TestimonialSection from "@/app/components/home/testimonial-section"
+// import TestimonialSection from "@/app/components/home/testimonial-section"
 import FAQSection from "@/app/components/home/faq-section"
 import Footer from "@/app/components/home/footer"
 
@@ -26,7 +26,7 @@ export default function Home() {
         <RecentWork />
       </section>
       <ProcessSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <section className="mb-24 sm:mb-[120px]">
         <FAQSection />
       </section>
