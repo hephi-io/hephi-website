@@ -97,30 +97,26 @@ body {
 .dummy {
 /* switch */
 
-box-sizing: border-box;
-
 /* Auto layout */
 display: flex;
 flex-direction: row;
-justify-content: space-between;
 align-items: center;
-padding: 8px 8px 8px 16px;
+padding: 8px;
 gap: 16px;
 
 margin: 0 auto;
-width: 361px;
-height: 54px;
+width: 207.33px;
+height: 56px;
 
 background: linear-gradient(0deg, rgba(177, 173, 173, 0.2), rgba(177, 173, 173, 0.2)), rgba(0, 0, 0, 0.4);
 background-blend-mode: normal, soft-light;
-border: 1px solid #3F3F3F;
-box-shadow: 1.11111px 6.66667px 13.3333px rgba(26, 29, 60, 0.15);
+box-shadow: 1.11111px 6.66667px 13.3333px #1A1D3C26;
 backdrop-filter: blur(15px);
 /* Note: backdrop-filter has minimal browser support */
-border-radius: 8px;
+border-radius: 100px;
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-flex-grow: 1;
+flex-grow: 0;
 }

@@ -66,11 +66,19 @@ const FAQSection = () => {
         subHeader="Got Questions? We've Got Answers."
       />
       {faqAccordions.map((faqAccordion, index) => (
+        // <div
+        //   key={index}
+        //   className={`${
+        //     accordion === faqAccordion.id ? "" : "border-b border-[#C6C6C6]"
+        //   } transition-all duration-300 ease-in-out`}
+        // >
         <div
           key={index}
-          className={`${
-            accordion === faqAccordion.id ? "" : "border-b border-[#C6C6C6]"
-          } transition-all duration-300 ease-in-out`}
+          className={`transition-all duration-300 ease-in-out ${
+            accordion === faqAccordion.id
+              ? ""
+              : "border-b border-[#C6C6C6] hover:border-b-black dark:hover:border-b-blue-300"
+          } `}
         >
           <div
             className={`rounded-3xl py-6 sm:py-9 ${
