@@ -10,7 +10,10 @@ import FAQSection from "@/app/components/home/faq-section";
 import Footer from "@/app/components/home/footer";
 import NavBar from "@/app/components/contact/nav-bar";
 import ModeToggle from "@/app/components/home/mode-toggle";
-import { HephiLogo } from "@/app/components/home/nav-bar";
+import Textarea from "@/app/components/contact/textarea";
+import Input from "@/app/components/contact/input";
+import EmailInput from "@/app/components/contact/email-input";
+import Select from "@/app/components/contact/select";
 
 import Arrow from "@/app/assets/svgs/arrow.svg";
 import CardIG from "@/app/assets/jpegs/a59edf0245df657c9d12deea3c5cd450.jpeg";
@@ -67,7 +70,7 @@ function Contact() {
               <div className="rounded-3xl bg-white dark:bg-[#242425] py-4 sm:py-9 lg:py-6">
                 <div className="w-[91.14%] sm:w-[89.92%] lg:w-[95.62%] mx-auto">
                   <h2
-                    className={`${francoisOne.className} text-[#363636] dark:text-white text-2xl leading-[41.6px] tracking-normal sm:text-[32px] sm:leading-[130%] mb-4 sm:mb-6`}
+                    className={`${francoisOne.className} text-[#363636] dark:text-white text-2xl leading-[41.6px] tracking-normal sm:text-[32px] sm:leading-[130%] mb-4 sm:mb-6 `}
                   >
                     We&apos;re Here to Help
                   </h2>
@@ -78,49 +81,15 @@ function Contact() {
                   </p>
                   <form>
                     <div className="sm:flex sm:justify-between sm:items-center sm:mb-4">
-                      <input
-                        type="text"
-                        name="firstName"
-                        className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4 sm:w-[48.75%] sm:mb-0"
-                        placeholder="First name"
-                        required
-                      />
-                      <input
-                        type="text"
-                        name="lastName"
-                        className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4 sm:w-[48.75%] sm:mb-0"
-                        placeholder="Last name"
-                        required
-                      />
+                      <Input name="firstName" placeholder="First name" />
+                      <Input name="lastName" placeholder="Last name" />
                     </div>
-                    <input
-                      type="email"
-                      name="email"
-                      className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none mb-4"
-                      required
-                      placeholder="Email Address"
-                    />
-                    <select
-                      name="service"
-                      className="w-full border border-gray-300 dark:border-[#6C6C6C] rounded-2xl lg:p-[24px] p-[16px] bg-[#EEEEEE] dark:bg-[#333334] placeholder:font-semibold dark:text-[#C9C9CA] mb-4"
-                    >
-                      <option value="" className="dark:text-[#C9C9CA]">
-                        -- Select --
-                      </option>
-                      <option value="web-design">Web Design</option>
-                      <option value="development">Development</option>
-                      <option value="marketing">Marketing</option>
-                    </select>
-                    <textarea
-                      name="message"
-                      rows={4}
-                      className="w-full lg:mb-4 border border-gray-300 dark:border-[#6C6C6C] rounded-xl lg:p-[24px] p-[16px] bg-[#f3f3f3] dark:bg-[#333334] placeholder:font-semibold dark:placeholder:text-[#C9C9CA] focus:outline-none resize-none lg:max-h-[112px] mb-4"
-                      placeholder="Type your message"
-                      required
-                    />
+                    <EmailInput />
+                    <Select />
+                    <Textarea />
                     <button
                       type="submit"
-                      className="w-full flex justify-between items-center bg-[#4795FF] rounded-xl text-white font-bold lg:p-[24px] p-[16px]"
+                      className="w-full flex justify-between items-center bg-[#4795FF] rounded-xl text-white font-bold lg:p-[24px] p-[16px] hover:cursor-pointer"
                     >
                       Contact Our Team
                       <Image
