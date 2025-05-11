@@ -46,7 +46,7 @@ const Hero = () => {
           <Image
             src={PictureOne}
             alt=""
-            className="w-full h-full border border-[#EBEBED] dark:border-black object-cover sm:rounded-[42px]"
+            className="w-full h-full border border-[#EBEBED] object-cover sm:rounded-[42px] dark:border-black"
           />
         </div>
       </div>

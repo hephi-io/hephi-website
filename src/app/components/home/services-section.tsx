@@ -53,18 +53,18 @@ const ServicesSection = () => {
             and Precision
           </Heading>
         </div>
-        <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-4 transition-all duration-700 ease-in">
+        <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-4">
           {serviceCards.map((serviceCard, index) => (
             <div
               key={index}
-              className="group rounded-3xl bg-[#F3F3F3] hover:bg-[#4795FF] dark:bg-[#1B1B1C] dark:border dark:border-[#313131] sm:rounded-[32px] lg:bg-white lg:hover:bg-white dark:lg:border-none dark:lg:hover:bg-[#1B1B1C] pt-4 pb-6 sm:pt-6 sm:pb-12 lg:p-0"
+              className="group rounded-3xl bg-[#F3F3F3] transition-all duration-[5s] ease-in-out hover:bg-[#4795FF] dark:bg-[#1B1B1C] dark:border dark:border-[#313131] sm:rounded-[32px] lg:bg-white lg:hover:bg-white dark:lg:border-none dark:lg:hover:bg-[#1B1B1C] pt-4 pb-6 sm:pt-6 sm:pb-12 lg:p-0"
             >
               <div className="w-[90%] mx-auto sm:w-[93.89%] lg:w-full">
                 <div className="relative h-[294px] rounded-xl border border-[#EBEBED] dark:border-[#313131] sm:h-[593px] sm:rounded-3xl lg:h-[641px] lg:group-hover:h-[577px] mb-9 lg:mb-6">
                   <Image
                     src={serviceCard.picturePath}
                     alt=""
-                    className="w-full h-full rounded-xl object-cover sm:rounded-3xl"
+                    className="w-full h-full rounded-xl object-cover group-hover:brightness-75 sm:rounded-3xl"
                   />
                   <div className="absolute top-4 right-4 w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#151313] sm:top-6 sm:right-6 lg:opacity-0 lg:group-hover:opacity-100">
                     <Image src={Arrow} width={25.2} height={25.2} alt="" />
