@@ -138,7 +138,7 @@ export const InstagramIcon = () => {
 const NavBar = () => {
   const links = [
     { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "/portfolio" },
+    { id: 2, name: "WORK", href: "#works" },
     { id: 3, name: "ABOUT", href: "#about" },
     { id: 4, name: "CONTACT US", href: "/contact" },
   ];
@@ -250,7 +250,12 @@ const NavBar = () => {
         </div>
         <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center sm:tab-nav-switch sm:bg-[#B1ADAD33]">
           <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
-            <div className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px] hover:cursor-pointer" onClick={() => {document.body.classList.toggle("dark")}}>
+            <div
+              className="relative w-[75px] h-10 rounded-full bg-[#4795FF] dark:bg-[#00000066] border-[2.5px] border-[#EBEBEB] dark:border-[#EBEBEB72] border-opacity-[0.48] flex gap-x-[5px] items-center p-[5px] hover:cursor-pointer"
+              onClick={() => {
+                document.body.classList.toggle("dark");
+              }}
+            >
               <div className="z-20 w-[30px] h-[30px] rounded-full text-[#EBEBEB] dark:text-[#282828]">
                 <DarkMode />
               </div>
@@ -272,7 +277,12 @@ const NavBar = () => {
           <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
             <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
               {links.map((link) => (
-                <Link key={link.id} href={link.href} className="w-fit">
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="w-fit"
+                  onClick={() => setMenuState(false)}
+                >
                   <Heading
                     as="span"
                     className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"

@@ -12,7 +12,7 @@ import BigPictureTwo from "@/app/assets/pngs/logo-with-union.png"
 
 const About = () => {
   return (
-    <section className="bg-[#F3F3F3] dark:bg-[#1B1B1C] sm:bg-white pb-4 pt-12 sm:p-0 mb-24 sm:mt-4 sm:mb-[120px]">
+    <section id="about" className="bg-[#F3F3F3] dark:bg-[#1B1B1C] sm:bg-white pb-4 pt-12 sm:p-0 mb-24 sm:mt-4 sm:mb-[120px]">
       <div className="w-[90%] mx-auto sm:w-[94.25%] lg:max-w-[1391px] lg:h-[563px] lg:flex lg:justify-between">
         <div className="sm:rounded-[42px] sm:border sm:border-[#EBEBED] dark:sm:border-[#313131] sm:py-9 sm:bg-[#F3F3F3] dark:sm:bg-[#1B1B1C] lg:w-[41.12%]">
           <div className="sm:w-[90.84%] sm:mx-auto lg:w-[87.41%] lg:h-full lg:flex lg:flex-col lg:justify-between">
