@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -100,9 +100,49 @@ const NavBar = () => {
     setMenuState(data);
   };
 
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hidden, setHidden] = useState(false);
+  const [hovering, setHovering] = useState(false);
+  const [hoveringOverHotZone, setHoveringOverHotZone] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (
+        currentScrollY > lastScrollY &&
+        currentScrollY > 50 &&
+        !hovering &&
+        !hoveringOverHotZone
+      ) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY, hovering, hoveringOverHotZone]);
+
   return (
     <>
-      <nav className="fixed z-30 top-4 left-4 right-4 nav h-[54px] flex justify-between items-center bg-[#B1ADAD33] dark:bg-[#00000066] border border-white dark:border-[#3F3F3F] sm:hidden p-2 pl-4 mx-auto">
+      <div
+        className="fixed top-4 left-0 z-30 w-full h-[54px] sm:top-[52px]"
+        onMouseEnter={() => setHoveringOverHotZone(true)}
+        onMouseLeave={() => setHoveringOverHotZone(false)}
+      />
+      <nav
+        className={`fixed z-40 top-4 left-4 right-4 nav h-[54px] flex justify-between items-center bg-[#B1ADAD33] dark:bg-[#00000066] border border-white dark:border-[#3F3F3F] sm:hidden p-2 pl-4 mx-auto transition-transform duration-300 ease-in-out ${
+          hidden && !hovering && !hoveringOverHotZone
+            ? "-translate-y-[72px]"
+            : "translate-y-0"
+        }`}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+      >
         <div className="py-2">
           <HephiLogo />
         </div>
@@ -124,13 +164,17 @@ const NavBar = () => {
         </button>
       </nav>
       <nav
-        className={`hidden sm:fixed sm:z-30 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto ${
+        className={`hidden sm:fixed sm:z-40 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto transition-transform duration-300 ease-in-out ${
           menuState ? "lg:justify-end" : ""
+        } ${
+          hidden && !hovering && !hoveringOverHotZone
+            ? "-translate-y-[110px]"
+            : "translate-y-0"
         }`}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
       >
-        <Link
-          href={'/#works'}
-        >
+        <Link href={"/#works"}>
           <button
             className={`hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] dark:lg:border-[#D1D1D2] lg:flex lg:justify-center lg:items-center hover:cursor-pointer ${
               menuState ? "lg:hidden" : ""
