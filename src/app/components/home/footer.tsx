@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import Image from "next/image";
@@ -9,19 +11,46 @@ import Arrow from "@/app/assets/svgs/arrow-forward.svg";
 
 const footer = () => {
   const gridItems = [
-    { header: "Office", textOne: "De Corridor 12G", textTwo: "Lekki, Lagos" },
+    {
+      header: "Office",
+      textOne: "De Corridor 12G",
+      textTwo: "Lekki, Lagos",
+      hrefOne: "#",
+      hrefTwo: "#",
+    },
     {
       header: "Call line",
       textOne: "Mel: +234 814 130 5018",
       textTwo: "Ikenna: +234 705 305 2215",
+      hrefOne: "#",
+      hrefTwo: "#",
     },
     {
       header: "Mail Us",
       textOne: "contact@hephi.io",
       textTwo: "hello@hephi.io",
+      hrefOne: "#",
+      hrefTwo: "#",
     },
-    { header: "Follow us", textOne: "Instagram", textTwo: "LinkedIn" },
+    {
+      header: "Follow us",
+      textOne: "Instagram",
+      textTwo: "LinkedIn",
+      hrefOne: "https://www.instagram.com/hephi.io",
+      hrefTwo: "https://www.linkedin.com/company/hephi-io",
+    },
   ];
+
+  const hrefChecker = (href: string, event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href === "#") {
+      handleClick(event);
+    }
+  };
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    console.log("Worked!!!")
+  };
 
   return (
     <div className="bg-[#4795FF] py-9 sm:w-[94.24%] sm:mx-auto sm:rounded-[36px] lg:max-w-[1391px]">
@@ -52,7 +81,7 @@ const footer = () => {
                 </div>
               </div>
 
-              <Link href={'/contact'}>
+              <Link href={"/contact"}>
                 <button className="h-12	rounded-full px-6 py-3 bg-gradient-to-b from-[#4E98FE] to-[#3283F3] flex gap-x-[10px] items-center hover:cursor-pointer mt-14 sm:mt-0 lg:mt-14">
                   <div className="font-bold text-lg leading-[23.4px] text-white lg:text-xl lg:leading-[26px]">
                     Get in touch
@@ -73,9 +102,29 @@ const footer = () => {
               </div>
 
               <div className="text-base leading-[19.2px] text-[#FFFFFFCC] sm:text-lg sm:leading-[21.6px] lg:text-xl lg:leading-6 mt-4">
-                <div>{gridItem.textOne}</div>
+                <div>
+                  <a
+                    href={gridItem.hrefOne}
+                    className="hover:underline"
+                    rel="noopener noreferrer"
+                    onClick={(event) => hrefChecker(gridItem.hrefOne, event)}
+                    target="_blank"
+                  >
+                    {gridItem.textOne}
+                  </a>
+                </div>
 
-                <div className="mt-1">{gridItem.textTwo}</div>
+                <div className="mt-1">
+                  <a
+                    href={gridItem.hrefTwo}
+                    className="hover:underline"
+                    rel="noopener noreferrer"
+                    onClick={(event) => hrefChecker(gridItem.hrefTwo, event)}
+                    target="_blank"
+                  >
+                    {gridItem.textTwo}
+                  </a>
+                </div>
               </div>
             </div>
           ))}

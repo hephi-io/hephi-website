@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 
 import Image from "next/image";
@@ -6,6 +8,8 @@ import Heading from "@/app/components/shared/heading";
 import Paragraph from "@/app/components/portfolio/paragraph";
 
 import ZipkodPhone from "@/app/assets/pngs/portfolio/zipkod-phone-big.png";
+import Link from "next/link";
+import { HephiLogo } from "@/app/components/home/nav-bar";
 
 const CaseStudy = () => {
   const gridItems = [
@@ -20,7 +24,12 @@ const CaseStudy = () => {
 
   return (
     <section className="sm:pt-4 sm:mb-[120px]">
-      <section className="relative h-[864px] border border-[#EBEBED] dark:border-[#313131] bg-[#F3F3F3] dark:bg-[#1B1B1C] flex justify-center sm:w-[94.24%] sm:h-[966px] sm:rounded-[42px] lg:max-w-[1391px] sm:mx-auto">
+      <section className="relative h-[864px] border border-[#EBEBED] dark:border-[#313131] bg-[#F3F3F3] dark:bg-[#1B1B1C] flex justify-center items-start sm:w-[94.24%] sm:h-[966px] sm:rounded-[42px] lg:max-w-[1391px] sm:mx-auto">
+        <div className="hidden sm:flex sm:items-center sm:w-[90.84%] sm:h-14 sm:absolute sm:top-9 lg:w-fit">
+          <Link href="/" className="hover:cursor-pointer">
+            <HephiLogo />
+          </Link>
+        </div>
         <div className="absolute bottom-4 w-[90%] sm:bottom-9 sm:w-[90.84%] lg:w-[94.82%]">
           <div className="lg:flex lg:justify-between lg:items-start">
             <Heading

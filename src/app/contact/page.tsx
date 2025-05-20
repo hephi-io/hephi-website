@@ -3,8 +3,10 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Francois_One } from "next/font/google";
 
+import {HephiLogo} from "@/app/components/home/nav-bar"
 import Heading from "@/app/components/shared/heading";
 import FAQSection from "@/app/components/home/faq-section";
 import Footer from "@/app/components/home/footer";
@@ -33,7 +35,13 @@ function Contact() {
                 CONTACT
               </Heading>
               <div className="mb-6 sm:mb-16 lg:hidden">
-                <div className="h-[54px] mb-20 sm:h-14 sm:mb-[120px]"></div>
+                <div className="h-[54px] mb-20 sm:h-14 sm:mb-[120px]">
+                  <div className="hidden sm:w-fit sm:h-full sm:flex sm:items-center">
+                    <Link href="/">
+                      <HephiLogo />
+                    </Link>
+                  </div>
+                </div>
                 <Heading className="text-3xl lg:text-4xl font-semibold leading-[3rem] text-[#363636] dark:text-white tracking-normal sm:text-[36px] sm:leading-[100%] mb-6">
                   We’re Here to Bring Your Vision to Life
                 </Heading>
@@ -66,7 +74,12 @@ function Contact() {
             </div>
           </div>
           <div className="lg:w-[57.73%] lg:h-full lg:rounded-[42px] lg:border lg:border-[#EBEBED] dark:lg:border-[#313131] lg:bg-[#F3F3F3] dark:lg:bg-[#1B1B1C] lg:py-9">
-            <div className="lg:w-[91.03%] lg:h-full lg:flex lg:items-end lg:mx-auto">
+            <div className="lg:w-[91.03%] lg:h-full lg:flex lg:flex-col lg:justify-between lg:mx-auto">
+              <div className="hidden lg:w-fit lg:h-14 lg:flex lg:items-center">
+                <Link href={"/"}>
+                  <HephiLogo />
+                </Link>
+              </div>
               <div className="rounded-3xl bg-white dark:bg-[#242425] py-4 sm:py-9 lg:py-6">
                 <div className="w-[91.14%] sm:w-[89.92%] lg:w-[95.62%] mx-auto">
                   <h2

@@ -57,7 +57,7 @@ const ServicesSection = () => {
           {serviceCards.map((serviceCard, index) => (
             <div
               key={index}
-              className="group rounded-3xl bg-[#F3F3F3] transition-all duration-[5s] ease-in-out hover:bg-[#4795FF] dark:bg-[#1B1B1C] dark:border dark:border-[#313131] sm:rounded-[32px] lg:bg-white lg:hover:bg-white dark:lg:border-none dark:lg:hover:bg-[#1B1B1C] pt-4 pb-6 sm:pt-6 sm:pb-12 lg:p-0"
+              className="group rounded-3xl bg-[#F3F3F3] transition-all duration-300 ease-in-out hover:bg-[#4795FF] dark:bg-[#1B1B1C] dark:border dark:border-[#313131] sm:rounded-[32px] lg:bg-white lg:hover:bg-white dark:lg:border-none dark:lg:hover:bg-[#1B1B1C] pt-4 pb-6 sm:pt-6 sm:pb-12 lg:p-0"
             >
               <div className="w-[90%] mx-auto sm:w-[93.89%] lg:w-full">
                 <div className="relative h-[294px] rounded-xl border border-[#EBEBED] dark:border-[#313131] sm:h-[593px] sm:rounded-3xl lg:h-[641px] lg:group-hover:h-[577px] mb-9 lg:mb-6">

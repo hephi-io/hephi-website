@@ -5,18 +5,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { NavbarDropdown, NavbarCookie } from "@/app/components/home/nav-bar";
 import MenuButton from "@/app/components/home/menu-button";
 import Heading from "@/app/components/shared/heading";
-import {
-  HephiLogo,
-  TwitterIcon,
-  WhatsappIcon,
-  LinkedinIcon,
-  InstagramIcon,
-} from "@/app/components/home/nav-bar";
+import { HephiLogo } from "@/app/components/home/nav-bar";
 import { DarkMode, LightMode } from "@/app/components/home/mode-toggle";
 
-import Arrow from "@/app/assets/svgs/arrow-forward-black.svg";
 import MenuIcon from "@/app/assets/svgs/menu-icon.svg";
 import CancelIcon from "@/app/assets/svgs/cancel-icon.svg";
 
@@ -42,58 +36,6 @@ const ArrowIcon = () => {
 };
 
 const NavBar = () => {
-  const links = [
-    { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "/#works" },
-    { id: 3, name: "ABOUT", href: "/#about" },
-    { id: 4, name: "CONTACT US", href: "/contact" },
-  ];
-
-  const emails = [
-    { id: 1, address: "info@hephi.io" },
-    { id: 2, address: "careers@hephi.io" },
-  ];
-
-  const socials = [
-    {
-      id: 1,
-      src: <TwitterIcon />,
-      mobileWidth: 19.18,
-      mobileHeight: 15.58,
-      tabWidth: 32,
-      tabHeight: 32,
-    },
-    {
-      id: 2,
-      src: <WhatsappIcon />,
-      mobileWidth: 18.24,
-      mobileHeight: 18.33,
-      tabWidth: 26.53,
-      tabHeight: 26.67,
-    },
-    {
-      id: 3,
-      src: <LinkedinIcon />,
-      mobileWidth: 14.14,
-      mobileHeight: 14.14,
-      tabWidth: 24,
-      tabHeight: 24,
-    },
-    {
-      id: 4,
-      src: <InstagramIcon />,
-      mobileWidth: 18.17,
-      mobileHeight: 19,
-      tabWidth: 32,
-      tabHeight: 32,
-    },
-  ];
-
-  const buttons = [
-    { id: 1, text: "Decline", imgSrc: undefined },
-    { id: 2, text: "Accept", imgSrc: Arrow },
-  ];
-
   const [menuState, setMenuState] = useState(false);
 
   const handleMenu = (data: boolean) => {
@@ -164,7 +106,7 @@ const NavBar = () => {
         </button>
       </nav>
       <nav
-        className={`hidden sm:fixed sm:z-40 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto transition-transform duration-300 ease-in-out ${
+        className={`hidden sm:fixed sm:z-40 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-end sm:items-center lg:max-w-[1319px] lg:justify-between sm:mx-auto transition-transform duration-300 ease-in-out ${
           menuState ? "lg:justify-end" : ""
         } ${
           hidden && !hovering && !hoveringOverHotZone
@@ -174,9 +116,9 @@ const NavBar = () => {
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
-        <Link href={"/#works"}>
+        <Link href={"/#works"} className="hidden lg:block">
           <button
-            className={`hidden lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] dark:lg:border-[#D1D1D2] lg:flex lg:justify-center lg:items-center hover:cursor-pointer ${
+            className={`lg:w-[109px] lg:h-10 lg:rounded-full lg:border-2 lg:border-[#363636] dark:lg:border-[#D1D1D2] lg:flex lg:justify-center lg:items-center hover:cursor-pointer ${
               menuState ? "lg:hidden" : ""
             }`}
           >
@@ -188,9 +130,6 @@ const NavBar = () => {
             </div>
           </button>
         </Link>
-        <div className={`sm:py-2 ${menuState ? "lg:hidden" : ""}`}>
-          <HephiLogo />
-        </div>
         <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center tab-nav-switch sm:bg-[#B1ADAD33]">
           <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
             <div
@@ -209,124 +148,8 @@ const NavBar = () => {
           <MenuButton menuState={menuState} handleMenu={handleMenu} />
         </div>
       </nav>
-      <div
-        className={`fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white dark:bg-[#1B1B1C] ${
-          !menuState && "hidden"
-        }`}
-      >
-        <div className="relative top-[15.03%] h-[84.97%] sm:top-[26.25vh] sm:h-[73.75vh]">
-          <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
-            <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
-              {links.map((link) => (
-                <Link key={link.id} href={link.href} className="w-fit">
-                  <Heading
-                    as="span"
-                    className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"
-                  >
-                    {link.name}
-                  </Heading>
-                </Link>
-              ))}
-            </section>
-            <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white mt-[7.41vh] sm:hidden">
-              Mail Us
-            </div>
-            <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
-              {emails.map((email) => (
-                <Link
-                  key={email.id}
-                  href={`mailto:${email.address}`}
-                  className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2] hover:cursor-pointer"
-                >
-                  {email.address}
-                </Link>
-              ))}
-            </section>
-            <section className="h-[12.83vh] border-t border-t-[#C6C6C6] flex justify-start items-center sm:h-[24.85vh] sm:items-start mt-[4.01vh] sm:mt-[8.02vh]">
-              <section className="sm:w-[50%] sm:pt-[8.02vh]">
-                <section className="flex gap-x-[15.56px] items-center">
-                  {socials.map((icon) => (
-                    <button
-                      key={icon.id}
-                      className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] dark:border-[#D1D1D2] flex justify-center items-center sm:w-14 sm:h-14"
-                    >
-                      <div
-                        className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px] text-[#2A2A2A] dark:text-[#D1D1D2]`}
-                      >
-                        {icon.src}
-                      </div>
-                    </button>
-                  ))}
-                </section>
-              </section>
-              <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center lg:block sm:pt-[8.02vh]">
-                <div className="lg:w-[72.86%] lg:mx-auto">
-                  <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white sm:leading-[120%]">
-                    Mail Us
-                  </div>
-                  <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
-                    {emails.map((email) => (
-                      <Link
-                        key={email.id}
-                        href={`mailto:${email.address}`}
-                        className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2]"
-                      >
-                        {email.address}
-                      </Link>
-                    ))}
-                  </section>
-                </div>
-              </section>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div className="fixed z-40 top-0 right-0 left-0 h-[100vh] bg-[#1515153D] hidden">
-        <div className="relative w-full h-full">
-          <div className="absolute w-[91.86%] right-0 bottom-8 left-0 rounded-3xl bg-[#151515] py-6 mx-auto">
-            <div className="w-[86.70%] mx-auto">
-              <Heading className="text-2xl leading-none tracking-normal text-white">
-                We use cookies
-              </Heading>
-
-              <div className="text-base leading-[120%] tracking-normal text-[#D1D1D2] mt-4">
-                We use Google Analytics to analyze our traffic.
-              </div>
-
-              <div className="flex justify-between items-center mt-14">
-                {buttons.map((button) => (
-                  <button
-                    key={button.id}
-                    className={`w-[47.44%] rounded-full ${
-                      button.id === 1 ? "border border-[#A3A3A3]" : "bg-white"
-                    } py-3 flex justify-center items-center`}
-                  >
-                    <div className="flex gap-x-2.5 items-center">
-                      <div
-                        className={`font-bold text-base leading-[130%] tracking-normal ${
-                          button.id === 1 ? "text-white" : "text-[#151515]"
-                        }`}
-                      >
-                        {button.text}
-                      </div>
-
-                      <div className={`w-6 h-6 ${!button.imgSrc && "hidden"}`}>
-                        <Image
-                          src={button.imgSrc}
-                          alt=""
-                          width={undefined}
-                          height={undefined}
-                          className={`w-full h-full`}
-                        />
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <NavbarDropdown menuState={menuState} handleMenu={handleMenu} />
+      <NavbarCookie />
     </>
   );
 };
