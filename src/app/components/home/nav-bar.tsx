@@ -15,7 +15,7 @@ import CancelIcon from "@/app/assets/svgs/cancel-icon.svg";
 
 const iconClass = "w-full h-full";
 
-export const HephiLogo = () => {
+export function HephiLogo() {
   return (
     <svg
       width="101"
@@ -133,59 +133,7 @@ export const InstagramIcon = () => {
   );
 };
 
-const NavBar = () => {
-  const links = [
-    { id: 1, name: "HOME", href: "/" },
-    { id: 2, name: "WORK", href: "#works" },
-    { id: 3, name: "ABOUT", href: "#about" },
-    { id: 4, name: "CONTACT US", href: "/contact" },
-  ];
-
-  const emails = [
-    { id: 1, address: "info@hephi.io" },
-    { id: 2, address: "careers@hephi.io" },
-  ];
-
-  const socials = [
-    {
-      id: 1,
-      src: <TwitterIcon />,
-      mobileWidth: 19.18,
-      mobileHeight: 15.58,
-      tabWidth: 32,
-      tabHeight: 32,
-    },
-    {
-      id: 2,
-      src: <WhatsappIcon />,
-      mobileWidth: 18.24,
-      mobileHeight: 18.33,
-      tabWidth: 26.53,
-      tabHeight: 26.67,
-    },
-    {
-      id: 3,
-      src: <LinkedinIcon />,
-      mobileWidth: 14.14,
-      mobileHeight: 14.14,
-      tabWidth: 24,
-      tabHeight: 24,
-    },
-    {
-      id: 4,
-      src: <InstagramIcon />,
-      mobileWidth: 18.17,
-      mobileHeight: 19,
-      tabWidth: 32,
-      tabHeight: 32,
-    },
-  ];
-
-  const buttons = [
-    { id: 1, text: "Decline", imgSrc: undefined },
-    { id: 2, text: "Accept", imgSrc: Arrow },
-  ];
-
+export default function NavBar() {
   const [menuState, setMenuState] = useState(false);
 
   const handleMenu = (data: boolean) => {
@@ -256,7 +204,7 @@ const NavBar = () => {
         </button>
       </nav>
       <nav
-        className={`hidden sm:fixed sm:z-40 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-between sm:items-center lg:max-w-[1319px] sm:mx-auto transition-transform duration-300 ease-in-out ${
+        className={`hidden sm:fixed sm:z-40 sm:top-[52px] sm:right-0 sm:left-0 sm:w-[85.61%] sm:h-14 sm:flex sm:justify-end sm:items-center lg:max-w-[1319px] sm:mx-auto transition-transform duration-300 ease-in-out ${
           hidden && !hoveringOverHotZone && !hovering
             ? "-translate-y-[110px]"
             : "translate-y-0"
@@ -264,36 +212,6 @@ const NavBar = () => {
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
-        <div className="sm:py-2">
-          <svg
-            width="101"
-            height="20"
-            viewBox="0 0 101 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              className="fill-black dark:fill-white"
-              clip-path="url(#clip0_1446_4921)"
-            >
-              <path d="M16.0628 0.5H19.9928V19.5H16.0628V11.8502H3.92996V19.5H0V0.5H3.92996V8.30192H16.0628V0.5Z" />
-              <path d="M42.1282 11.5283H27.7332C28.2359 14.4688 30.403 15.9786 33.3057 15.9786C35.4342 15.9786 37.408 15.011 38.4134 13.3474L41.4313 14.8563C39.845 17.8742 36.5943 19.5 33.1502 19.5C27.9265 19.5 23.8242 15.6692 23.8242 9.942C23.8242 4.21476 28.0038 0.5 33.1502 0.5C38.2966 0.5 42.2047 4.21476 42.2047 9.90333C42.2047 10.406 42.166 10.9482 42.1273 11.5283H42.1282ZM38.4134 8.47173C38.0267 5.6472 35.9756 4.02141 33.1897 4.02141C30.4039 4.02141 28.314 5.45301 27.7727 8.47173H38.4143H38.4134Z" />
-              <path d="M85.307 0.5H89.2369V19.5H85.307V11.8502H73.1741V19.5H69.2441V0.5H73.1741V8.30192H85.307V0.5Z" />
-              <path d="M46.0371 0.5V19.5H49.9671V13.4147H59.6831C63.2491 13.4147 66.14 10.5237 66.14 6.95775C66.14 3.39178 63.2491 0.500841 59.6831 0.500841H46.0371V0.5ZM49.9671 9.82851V4.08614H59.3393C60.9247 4.08614 62.2101 5.37147 62.2101 6.95691C62.2101 8.54234 60.9247 9.82767 59.3393 9.82767H49.9671V9.82851Z" />
-              <path d="M98.4716 5.30758C97.1442 5.30758 96.0682 4.23157 96.0682 2.90421C96.0682 1.57685 97.1434 0.5 98.4716 0.5C99.7998 0.5 100.875 1.57601 100.875 2.90337C100.875 4.23073 99.799 5.30674 98.4716 5.30674V5.30758ZM100.245 8.30192V19.5H96.697V11.8502H92.6914V8.30192H100.245Z" />
-            </g>
-            <defs>
-              <clipPath id="clip0_1446_4921">
-                <rect
-                  width="100.876"
-                  height="19"
-                  fill="white"
-                  transform="translate(0 0.5)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
         <div className="sm:rounded-full sm:flex sm:gap-x-4 sm:items-center tab-nav-switch sm:bg-[#B1ADAD33]">
           <div className="w-[91px] h-14 rounded-full flex justify-center items-center">
             <div
@@ -314,128 +232,216 @@ const NavBar = () => {
           <MenuButton menuState={menuState} handleMenu={handleMenu} />
         </div>
       </nav>
-      <div
-        className={`fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white dark:bg-[#1B1B1C] ${
-          !menuState && "hidden"
-        }`}
-      >
-        <div className="relative top-[15.03%] h-[84.97%] sm:top-[26.25vh] sm:h-[73.75vh]">
-          <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
-            <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
-              {links.map((link) => (
-                <Link
-                  key={link.id}
-                  href={link.href}
-                  className="w-fit"
-                  onClick={() => setMenuState(false)}
+      <NavbarDropdown menuState={menuState} handleMenu={handleMenu} />
+      <NavbarCookie />
+    </>
+  );
+}
+
+export interface INavbarDropdownProps {
+  menuState: boolean;
+  handleMenu: (data: boolean) => void;
+}
+
+export function NavbarDropdown(props: INavbarDropdownProps) {
+  const { menuState, handleMenu } = props;
+
+  const links = [
+    { id: 1, name: "HOME", href: "/" },
+    { id: 2, name: "WORK", href: "/#works" },
+    { id: 3, name: "ABOUT", href: "/#about" },
+    { id: 4, name: "CONTACT US", href: "/contact" },
+  ];
+
+  const emails = [
+    { id: 1, address: "info@hephi.io" },
+    { id: 2, address: "careers@hephi.io" },
+  ];
+
+  const socials = [
+    {
+      id: 1,
+      src: <TwitterIcon />,
+      mobileWidth: 19.18,
+      mobileHeight: 15.58,
+      tabWidth: 32,
+      tabHeight: 32,
+      href: "https://x.com/Hephi_io",
+    },
+    {
+      id: 2,
+      src: <WhatsappIcon />,
+      mobileWidth: 18.24,
+      mobileHeight: 18.33,
+      tabWidth: 26.53,
+      tabHeight: 26.67,
+      href: "#",
+    },
+    {
+      id: 3,
+      src: <LinkedinIcon />,
+      mobileWidth: 14.14,
+      mobileHeight: 14.14,
+      tabWidth: 24,
+      tabHeight: 24,
+      href: "https://www.linkedin.com/company/hephi-io",
+    },
+    {
+      id: 4,
+      src: <InstagramIcon />,
+      mobileWidth: 18.17,
+      mobileHeight: 19,
+      tabWidth: 32,
+      tabHeight: 32,
+      href: "https://www.instagram.com/hephi.io",
+    },
+  ];
+
+  const hrefChecker = (
+    href: string,
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    if (href === "#") {
+      event.preventDefault();
+    }
+  };
+
+  return (
+    <div
+      className={`fixed z-20 top-0 right-0 left-0 h-[100vh] bg-white dark:bg-[#1B1B1C] ${
+        !menuState && "hidden"
+      }`}
+    >
+      <div className="relative top-[15.03%] h-[84.97%] sm:top-[26.25vh] sm:h-[73.75vh]">
+        <div className="w-[91.86%] h-full sm:w-[85.61%] lg:max-w-[1319px] mx-auto">
+          <section className="h-[41.44%] flex flex-col justify-between sm:h-[35.67vh]">
+            {links.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                className="w-fit"
+                onClick={() => handleMenu(false)}
+              >
+                <Heading
+                  as="span"
+                  className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"
                 >
-                  <Heading
-                    as="span"
-                    className="text-[40px] leading-12 tracking-normal text-[#2B2B2B] dark:text-white sm:text-[64px] sm:leading-[120%]"
+                  {link.name}
+                </Heading>
+              </Link>
+            ))}
+          </section>
+          <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white mt-[7.41vh] sm:hidden">
+            Mail Us
+          </div>
+          <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
+            {emails.map((email) => (
+              <Link
+                key={email.id}
+                href={`mailto:${email.address}`}
+                className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2] hover:cursor-pointer"
+              >
+                {email.address}
+              </Link>
+            ))}
+          </section>
+          <section className="h-[12.83vh] border-t border-t-[#C6C6C6] flex justify-start items-center sm:h-[24.85vh] sm:items-start mt-[4.01vh] sm:mt-[8.02vh]">
+            <section className="sm:w-[50%] sm:pt-[8.02vh]">
+              <section className="flex gap-x-[15.56px] items-center">
+                {socials.map((icon) => (
+                  <button
+                    key={icon.id}
+                    className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] dark:border-[#D1D1D2] flex justify-center items-center sm:w-14 sm:h-14"
                   >
-                    {link.name}
-                  </Heading>
-                </Link>
-              ))}
-            </section>
-            <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white mt-[7.41vh] sm:hidden">
-              Mail Us
-            </div>
-            <section className="h-[6.63%] flex flex-col justify-between mt-[1.85vh] sm:hidden">
-              {emails.map((email) => (
-                <Link
-                  key={email.id}
-                  href={`mailto:${email.address}`}
-                  className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2] hover:cursor-pointer"
-                >
-                  {email.address}
-                </Link>
-              ))}
-            </section>
-            <section className="h-[12.83vh] border-t border-t-[#C6C6C6] flex justify-start items-center sm:h-[24.85vh] sm:items-start mt-[4.01vh] sm:mt-[8.02vh]">
-              <section className="sm:w-[50%] sm:pt-[8.02vh]">
-                <section className="flex gap-x-[15.56px] items-center">
-                  {socials.map((icon) => (
-                    <button
-                      key={icon.id}
-                      className="w-12 h-12 rounded-full border-[1.56px] border-[#363636] dark:border-[#D1D1D2] flex justify-center items-center sm:w-14 sm:h-14"
+                    <div
+                      className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px] text-[#2A2A2A] dark:text-[#D1D1D2]`}
                     >
-                      <div
-                        className={`w-[${icon.mobileWidth}px] h-[${icon.mobileHeight}px] sm:w-[${icon.tabWidth}px] sm:h-[${icon.tabHeight}px] text-[#2A2A2A] dark:text-[#D1D1D2]`}
+                      <a
+                        href={icon.href}
+                        target="_blank"
+                        onClick={(event) => hrefChecker(icon.href, event)}
                       >
                         {icon.src}
-                      </div>
-                    </button>
-                  ))}
-                </section>
-              </section>
-              <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center lg:block sm:pt-[8.02vh]">
-                <div className="lg:w-[72.86%] lg:mx-auto">
-                  <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white sm:leading-[120%]">
-                    Mail Us
-                  </div>
-                  <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
-                    {emails.map((email) => (
-                      <Link
-                        key={email.id}
-                        href={`mailto:${email.address}`}
-                        className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2]"
-                      >
-                        {email.address}
-                      </Link>
-                    ))}
-                  </section>
-                </div>
-              </section>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div className="fixed z-40 top-0 right-0 left-0 h-[100vh] bg-[#1515153D] hidden">
-        <div className="relative w-full h-full">
-          <div className="absolute w-[91.86%] right-0 bottom-8 left-0 rounded-3xl bg-[#151515] py-6 mx-auto">
-            <div className="w-[86.70%] mx-auto">
-              <Heading className="text-2xl leading-none tracking-normal text-white">
-                We use cookies
-              </Heading>
-              <div className="text-base leading-[120%] tracking-normal text-[#D1D1D2] mt-4">
-                We use Google Analytics to analyze our traffic.
-              </div>
-              <div className="flex justify-between items-center mt-14">
-                {buttons.map((button) => (
-                  <button
-                    key={button.id}
-                    className={`w-[47.44%] rounded-full ${
-                      button.id === 1 ? "border border-[#A3A3A3]" : "bg-white"
-                    } py-3 flex justify-center items-center`}
-                  >
-                    <div className="flex gap-x-2.5 items-center">
-                      <div
-                        className={`font-bold text-base leading-[130%] tracking-normal ${
-                          button.id === 1 ? "text-white" : "text-[#151515]"
-                        }`}
-                      >
-                        {button.text}
-                      </div>
-                      <div className={`w-6 h-6 ${!button.imgSrc && "hidden"}`}>
-                        <Image
-                          src={button.imgSrc}
-                          alt=""
-                          width={undefined}
-                          height={undefined}
-                          className={`w-full h-full`}
-                        />
-                      </div>
+                      </a>
                     </div>
                   </button>
                 ))}
+              </section>
+            </section>
+            <section className="hidden sm:w-[50%] sm:h-full sm:border-l sm:border-l-[#B9B9B9] sm:flex sm:justify-center lg:block sm:pt-[8.02vh]">
+              <div className="lg:w-[72.86%] lg:mx-auto">
+                <div className="font-bold text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-white sm:leading-[120%]">
+                  Mail Us
+                </div>
+                <section className="h-[4.81vh] flex flex-col justify-between mt-[1.85vh]">
+                  {emails.map((email) => (
+                    <Link
+                      key={email.id}
+                      href={`mailto:${email.address}`}
+                      className="w-fit text-xl leading-6 tracking-normal text-[#2A2A2A] dark:text-[#D1D1D2]"
+                    >
+                      {email.address}
+                    </Link>
+                  ))}
+                </section>
               </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function NavbarCookie() {
+  const buttons = [
+    { id: 1, text: "Decline", imgSrc: undefined },
+    { id: 2, text: "Accept", imgSrc: Arrow },
+  ];
+
+  return (
+    <div className="fixed z-40 top-0 right-0 left-0 h-[100vh] bg-[#1515153D] hidden">
+      <div className="relative w-full h-full">
+        <div className="absolute w-[91.86%] right-0 bottom-8 left-0 rounded-3xl bg-[#151515] py-6 mx-auto">
+          <div className="w-[86.70%] mx-auto">
+            <Heading className="text-2xl leading-none tracking-normal text-white">
+              We use cookies
+            </Heading>
+            <div className="text-base leading-[120%] tracking-normal text-[#D1D1D2] mt-4">
+              We use Google Analytics to analyze our traffic.
+            </div>
+            <div className="flex justify-between items-center mt-14">
+              {buttons.map((button) => (
+                <button
+                  key={button.id}
+                  className={`w-[47.44%] rounded-full ${
+                    button.id === 1 ? "border border-[#A3A3A3]" : "bg-white"
+                  } py-3 flex justify-center items-center`}
+                >
+                  <div className="flex gap-x-2.5 items-center">
+                    <div
+                      className={`font-bold text-base leading-[130%] tracking-normal ${
+                        button.id === 1 ? "text-white" : "text-[#151515]"
+                      }`}
+                    >
+                      {button.text}
+                    </div>
+                    <div className={`w-6 h-6 ${!button.imgSrc && "hidden"}`}>
+                      <Image
+                        src={button.imgSrc}
+                        alt=""
+                        width={undefined}
+                        height={undefined}
+                        className={`w-full h-full`}
+                      />
+                    </div>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default NavBar;
+}

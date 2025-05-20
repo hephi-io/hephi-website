@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Francois_One } from "next/font/google";
 
+import {HephiLogo} from "@/app/components/home/nav-bar"
+
 import Arrow from "@/app/assets/svgs/arrow-forward.svg";
 
 import PictureOne from "@/app/assets/pngs/Frame 1321313983.png";
@@ -16,7 +18,11 @@ const Hero = () => {
       <div className="sm:w-[94.24%] lg:max-w-[1391px] lg:relative lg:h-[966px] sm:mx-auto">
         <div className="h-[864px] border border-[#EBEBED] dark:border-black dark:sm:border-[#313131] py-4 bg-[#F3F3F3] dark:bg-[#1B1B1C] sm:rounded-[42px] sm:py-9 sm:h-[718px] lg:absolute lg:top-0 lg:right-0 lg:w-[57.73%] lg:h-full">
           <div className="relative w-[90%] h-full mx-auto sm:w-[90.84%] lg:w-[91.03%]">
-            <div className="h-[54px] sm:h-14"></div>
+            <div className="h-[54px] sm:h-14">
+              <div className="hidden sm:w-fit sm:h-full sm:flex sm:items-center">
+                <HephiLogo />
+              </div>
+            </div>
             <div className="absolute bottom-0">
               <div className="text-base leading-[19.2px] text-[#6F6F6F] dark:text-[#D1D1D2] lg:text-2xl lg:leading-[28.8px] mb-8">
                 We build standout digital solutions that are both innovative and
