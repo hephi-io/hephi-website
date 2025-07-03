@@ -22,9 +22,9 @@ export default function Home() {
       <About />
       <MarqueeSection />
       <ServicesSection />
-      <section className="mb-24 sm:mb-[120px]">
+      {/* <section className="mb-24 sm:mb-[120px]">
         <RecentWork />
-      </section>
+      </section> */}
       <ProcessSection />
       {/* <TestimonialSection /> */}
       <section className="mb-24 sm:mb-[120px]">
